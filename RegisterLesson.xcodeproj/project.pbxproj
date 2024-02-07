@@ -15,6 +15,12 @@
 		5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* Constants.swift */; };
 		5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */; };
 		5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */; };
+		5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FA2B73F06A005B42F2 /* SignInView.swift */; };
+		5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FC2B73F075005B42F2 /* SignInVC.swift */; };
+		5281A0FF2B73F0AC005B42F2 /* SingUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FE2B73F0AC005B42F2 /* SingUpVC.swift */; };
+		5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1002B73F0B8005B42F2 /* SignUpView.swift */; };
+		5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */; };
+		5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 		5256AFEC2B73A5DE007F6E0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		5281A0FC2B73F075005B42F2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		5281A0FE2B73F0AC005B42F2 /* SingUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpVC.swift; sourceTree = "<group>"; };
+		5281A1002B73F0B8005B42F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		5256AFEE2B73BFC2007F6E0C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5281A0F62B73EEF0005B42F2 /* Auth */,
 				5256AFEF2B73BFC7007F6E0C /* OnBoarding */,
 			);
 			path = Features;
@@ -109,6 +122,43 @@
 				5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		5281A0F62B73EEF0005B42F2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5281A0F92B73F04F005B42F2 /* ForgotPassword */,
+				5281A0F82B73F04A005B42F2 /* SignUp */,
+				5281A0F72B73F043005B42F2 /* SignIn */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5281A0F72B73F043005B42F2 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				5281A0FA2B73F06A005B42F2 /* SignInView.swift */,
+				5281A0FC2B73F075005B42F2 /* SignInVC.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		5281A0F82B73F04A005B42F2 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5281A0FE2B73F0AC005B42F2 /* SingUpVC.swift */,
+				5281A1002B73F0B8005B42F2 /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		5281A0F92B73F04F005B42F2 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */,
+				5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,10 +232,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5256AFD82B73A240007F6E0C /* RegisterLesson.xcdatamodeld in Sources */,
+				5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */,
+				5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */,
+				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
+				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
+				5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */,
 				5256AFE52B73A3BF007F6E0C /* DenemeViewController.swift in Sources */,
+				5281A0FF2B73F0AC005B42F2 /* SingUpVC.swift in Sources */,
 				5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

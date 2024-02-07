@@ -16,6 +16,17 @@ class OnboardingVC: UIViewController {
         sView = OnboardingView()
         view = sView
         
+        sView?.SignInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
+        sView?.SignUpButton.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
+        
+        
+    }
+    
+    @objc func signInTapped(){
+        
+    }
+    
+    @objc func signUpTapped(){
         
     }
 
