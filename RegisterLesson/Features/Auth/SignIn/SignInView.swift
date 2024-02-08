@@ -10,7 +10,7 @@ import UIKit
 class SignInView: UIView {
 
     
-    var previousButton = CustomComponents.BackButton()
+    var previousButton = CustomComponents.BackButton(systemImage: "arrow.left")
     var titleLabel = CustomComponents.BoldLabel(size: 50, text: "Sign In")
     var usernameLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Username")
     var passwordLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Password")

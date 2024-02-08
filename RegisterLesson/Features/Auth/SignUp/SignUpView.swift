@@ -10,7 +10,7 @@ import UIKit
 class SignUpView: UIView {
     
     
-    var backButton = CustomComponents.BackButton()
+    var backButton = CustomComponents.BackButton(systemImage: "arrow.left")
     var titleLabel = CustomComponents.BoldLabel(size: 30, text: "Create Account")
     var descriptionLabel = CustomComponents.ItalicLabel(size: 20, text: "Enter Your Information")
     var usernameLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Username")

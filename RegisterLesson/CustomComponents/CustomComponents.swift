@@ -25,14 +25,14 @@ struct CustomComponents {
         return textfield
     }
     
-    static func BackButton() -> UIButton {
+    static func BackButton(systemImage : String) -> UIButton {
         let button = UIButton()
-        
-        button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+
+        button.frame = CGRect(x: 0, y: 0, width: 40, height:40)
         button.layer.cornerRadius = button.bounds.size.width / 2
         button.clipsToBounds = true
         button.backgroundColor = .orange
-        let symbolImage = UIImage(systemName: "arrow.left")
+        let symbolImage = UIImage(systemName: systemImage)
         button.setImage(symbolImage, for: .normal)
         button.tintColor = .white
         return button

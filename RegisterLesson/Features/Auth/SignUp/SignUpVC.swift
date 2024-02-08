@@ -32,18 +32,36 @@ class SignUpVC: UIViewController {
                 let context = appdelegate.persistentContainer.viewContext
                 let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
                 
-                user.setValue(sView?.usernameTextField.text, forKey: "username")
-                user.setValue(sView?.passwordTextField.text, forKey: "password")
-                user.setValue(UUID(), forKey: "id")
+                let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+                fetchRequest.predicate = NSPredicate(format: "username == %@", (sView?.usernameTextField.text)!)
                 
-                do {
-                    try context.save()
-                    let alert = UIAlertController(title: "Success", message: "Your account created succesfully", preferredStyle: .alert)
+                do{
+                    
+                    
+                    let users = try context.fetch(fetchRequest)
+                    
+                    guard let user = users.first else {
+                        user.setValue(sView?.usernameTextField.text, forKey: "username")
+                        user.setValue(sView?.passwordTextField.text, forKey: "password")
+                        user.setValue(UUID(), forKey: "id")
+                        do {
+                            try context.save()
+                            let alert = UIAlertController(title: "Success", message: "Your account created succesfully", preferredStyle: .alert)
+                            let action = UIAlertAction(title: "OK", style: .cancel)
+                            alert.addAction(action)
+                            self.present(alert, animated: true)
+                        }catch{
+                            print("error")
+                        }
+                        return
+                    }
+                    let alert = UIAlertController(title: "ERROR", message: "Account Already exist", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel)
                     alert.addAction(action)
                     self.present(alert, animated: true)
-                }catch{
-                    print("error")
+                    
+                }catch {
+                    
                 }
                 navigationController?.popViewController(animated: true)
             }else {
