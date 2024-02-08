@@ -14,6 +14,14 @@ class SignInVC: UIViewController {
     override func loadView() {
         sView = SignInView()
         view = sView
+        
+        navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sView!.previousButton)
+        
+        sView?.previousButton.addTarget(self, action: #selector(goPrevious), for: .touchUpInside)
+    }
+    @objc func goPrevious(){
+        navigationController?.popViewController(animated: true)
     }
 
 }
