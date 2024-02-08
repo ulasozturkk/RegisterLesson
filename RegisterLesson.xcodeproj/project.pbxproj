@@ -22,6 +22,15 @@
 		5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */; };
 		5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */; };
 		5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1082B74B19E005B42F2 /* CustomComponents.swift */; };
+		5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10A2B74E507005B42F2 /* TabBar.swift */; };
+		5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10F2B74E67F005B42F2 /* LessonListVC.swift */; };
+		5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1112B74E69A005B42F2 /* LessonListView.swift */; };
+		5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1132B74E6A5005B42F2 /* GradeEntryView.swift */; };
+		5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1152B74E6B3005B42F2 /* GradeEntryVC.swift */; };
+		5281A1182B74E6C0005B42F2 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1172B74E6C0005B42F2 /* SettingsVC.swift */; };
+		5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1192B74E6CE005B42F2 /* SettingsView.swift */; };
+		5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */; };
+		5281A11F2B74F003005B42F2 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A11E2B74F003005B42F2 /* Lesson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +55,15 @@
 		5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		5281A1062B73F93E005B42F2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5281A1082B74B19E005B42F2 /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
+		5281A10A2B74E507005B42F2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		5281A10F2B74E67F005B42F2 /* LessonListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListVC.swift; sourceTree = "<group>"; };
+		5281A1112B74E69A005B42F2 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
+		5281A1132B74E6A5005B42F2 /* GradeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeEntryView.swift; sourceTree = "<group>"; };
+		5281A1152B74E6B3005B42F2 /* GradeEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeEntryVC.swift; sourceTree = "<group>"; };
+		5281A1172B74E6C0005B42F2 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		5281A1192B74E6CE005B42F2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		5281A11E2B74F003005B42F2 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +132,12 @@
 		5256AFEE2B73BFC2007F6E0C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				5281A10E2B74E530005B42F2 /* Settings */,
+				5281A10D2B74E525005B42F2 /* GradeEntry */,
+				5281A10C2B74E514005B42F2 /* LessonList */,
 				5281A0F62B73EEF0005B42F2 /* Auth */,
 				5256AFEF2B73BFC7007F6E0C /* OnBoarding */,
+				5281A10A2B74E507005B42F2 /* TabBar.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -172,6 +194,43 @@
 				5281A1082B74B19E005B42F2 /* CustomComponents.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		5281A10C2B74E514005B42F2 /* LessonList */ = {
+			isa = PBXGroup;
+			children = (
+				5281A11D2B74EFF8005B42F2 /* model */,
+				5281A10F2B74E67F005B42F2 /* LessonListVC.swift */,
+				5281A1112B74E69A005B42F2 /* LessonListView.swift */,
+				5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */,
+			);
+			path = LessonList;
+			sourceTree = "<group>";
+		};
+		5281A10D2B74E525005B42F2 /* GradeEntry */ = {
+			isa = PBXGroup;
+			children = (
+				5281A1132B74E6A5005B42F2 /* GradeEntryView.swift */,
+				5281A1152B74E6B3005B42F2 /* GradeEntryVC.swift */,
+			);
+			path = GradeEntry;
+			sourceTree = "<group>";
+		};
+		5281A10E2B74E530005B42F2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5281A1172B74E6C0005B42F2 /* SettingsVC.swift */,
+				5281A1192B74E6CE005B42F2 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		5281A11D2B74EFF8005B42F2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5281A11E2B74F003005B42F2 /* Lesson.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,19 +303,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5281A1182B74E6C0005B42F2 /* SettingsVC.swift in Sources */,
+				5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */,
 				5256AFD82B73A240007F6E0C /* RegisterLesson.xcdatamodeld in Sources */,
 				5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */,
 				5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */,
+				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
+				5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */,
+				5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */,
 				5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */,
+				5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */,
 				5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */,
+				5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */,
 				5256AFE52B73A3BF007F6E0C /* DenemeViewController.swift in Sources */,
 				5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */,
 				5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */,
+				5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */,
+				5281A11F2B74F003005B42F2 /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

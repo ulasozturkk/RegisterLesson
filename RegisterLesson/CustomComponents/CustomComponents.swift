@@ -11,7 +11,7 @@ import UIKit
 struct CustomComponents {
     
     static func createTextField(placeholder : String,isSecured : Bool) -> UITextField {
-        var textfield = UITextField()
+        let textfield = UITextField()
         textfield.translatesAutoresizingMaskIntoConstraints = false
         textfield.placeholder = placeholder
         textfield.font = UIFont(name: Constants.light, size: 20)

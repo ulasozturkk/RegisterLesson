@@ -12,6 +12,7 @@ class SignUpVC: UIViewController {
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sView!.backButton)
         let gestureRec = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRec)
         
         sView?.backButton.addTarget(self, action: #selector(goPreviousPage), for: .touchUpInside)
         sView?.signUpButton.addTarget(self, action: #selector(createAccount), for: .touchUpInside)
@@ -37,8 +38,8 @@ class SignUpVC: UIViewController {
                 
                 do {
                     try context.save()
-                    let alert = UIAlertController(title: "Başarılı", message: "Hesabınız başarıyla oluşturuldu", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Tamam", style: .cancel)
+                    let alert = UIAlertController(title: "Success", message: "Your account created succesfully", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "OK", style: .cancel)
                     alert.addAction(action)
                     self.present(alert, animated: true)
                 }catch{
@@ -46,13 +47,13 @@ class SignUpVC: UIViewController {
                 }
                 navigationController?.popViewController(animated: true)
             }else {
-                let alert = UIAlertController(title: "HATA", message: "Şifreler Uyuşmuyor!", preferredStyle: .alert)
+                let alert = UIAlertController(title: "ERROR", message: "Passwords must be same!", preferredStyle: .alert)
                 let action = UIAlertAction(title: "OK", style: .cancel)
                 alert.addAction(action)
                 self.present(alert, animated: true)
             }
         }else {
-            let alert = UIAlertController(title: "HATA", message: "Kullanıcı adı ve şifre boş olamaz!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "ERROR", message: "Username and Password cannot be empty", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel)
             alert.addAction(action)
             self.present(alert, animated: true)

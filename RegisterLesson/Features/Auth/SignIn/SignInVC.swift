@@ -18,7 +18,6 @@ class SignInVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func signIn(){
-        
         if sView?.usernameTextField.text != "" && sView?.passwordTextField.text != "" {
             let appdelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appdelegate.persistentContainer.viewContext
@@ -31,7 +30,7 @@ class SignInVC: UIViewController {
                 let users = try context.fetch(fetchRequest)
                 
                 guard let user = users.first else {
-                    let alert = UIAlertController(title: "HATA", message: "Kullanıcı Bulunamadı", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "ERROR", message: "User Not Found", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel)
                     alert.addAction(action)
                     self.present(alert,animated: true)
@@ -39,8 +38,9 @@ class SignInVC: UIViewController {
                 }
                 if user.password == sView?.passwordTextField.text! {
                     print("giris basarili")
+                    navigationController?.pushViewController(TabBar(), animated: true)
                 }else {
-                    let alert = UIAlertController(title: "HATA", message: "Yanlış Şifre", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "ERROR", message: "Invalid Password", preferredStyle: .alert)
                     let action = UIAlertAction(title: "OK", style: .cancel)
                     alert.addAction(action)
                     self.present(alert,animated: true)
@@ -49,7 +49,7 @@ class SignInVC: UIViewController {
                 print("hata")
             }
         }else {
-            let alert = UIAlertController(title: "HATA", message: "Username ve Password Boş Olamaz!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "ERROR", message: "Username and Password cannot be empty", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel)
             alert.addAction(action)
             self.present(alert,animated: true)
