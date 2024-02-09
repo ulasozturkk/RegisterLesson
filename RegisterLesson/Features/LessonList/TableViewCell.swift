@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewCell: UITableViewCell {
     
@@ -14,7 +15,7 @@ class TableViewCell: UITableViewCell {
     var lessonGradeLabel = CustomComponents.LightLabel(size: 15, text: "")
     var stackView = UIStackView()
 
-    public var item : Lessons! {
+    public var item : Lesson! {
         didSet{
             lessonNameLabel.text = item.name
             let grade = String(item.grade)
@@ -24,16 +25,15 @@ class TableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.addArrangedSubview(lessonNameLabel)
-        stackView.addArrangedSubview(lessonGradeLabel)
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .center
-        addSubview(stackView)
+        addSubview(lessonNameLabel)
+        addSubview(lessonGradeLabel)
+        
+        
         NSLayoutConstraint.activate([
-            stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            lessonNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 20),
+            lessonNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            lessonGradeLabel.topAnchor.constraint(equalTo: lessonNameLabel.bottomAnchor, constant: 20),
+            lessonGradeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
         ])
         
     }

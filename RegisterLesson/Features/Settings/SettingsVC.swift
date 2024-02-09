@@ -12,7 +12,7 @@ class SettingsVC: UIViewController {
 
     var sView : SettingsView?
     override func loadView() {
-        
+        print("settings")
         sView = SettingsView()
         view = sView
         sView?.addButton.addTarget(self, action: #selector(addLesson), for: .touchUpInside)
@@ -34,13 +34,19 @@ class SettingsVC: UIViewController {
                         lesson.setValue(sView?.lessonTextField.text, forKey: "name")
                         try context.save()
                         sView?.lessonTextField.text = ""
+                        
+                        let event = Notification.Name("add")
+                        NotificationCenter.default.post(name: event, object: nil)
+                        
                         let alert = UIAlertController(title: "Success", message: "Lesson saved succesfully!", preferredStyle: .alert)
                         let action = UIAlertAction(title: "OK", style: .cancel)
                         alert.addAction(action)
                         self.present(alert,animated: true)
                     }catch{
+                        context.rollback()
                         print("error")
                     }
+                    
                     return
                 }
                 let alert = UIAlertController(title: "ERROR", message: "Lesson already exist", preferredStyle: .alert)

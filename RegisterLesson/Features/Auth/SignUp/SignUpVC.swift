@@ -34,12 +34,10 @@ class SignUpVC: UIViewController {
                 
                 let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
                 fetchRequest.predicate = NSPredicate(format: "username == %@", (sView?.usernameTextField.text)!)
-                
+            
                 do{
-                    
-                    
                     let users = try context.fetch(fetchRequest)
-                    
+        
                     guard let user = users.first else {
                         user.setValue(sView?.usernameTextField.text, forKey: "username")
                         user.setValue(sView?.passwordTextField.text, forKey: "password")
