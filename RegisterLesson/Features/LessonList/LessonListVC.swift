@@ -5,7 +5,7 @@ import UIKit
 class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
   var sView: LessonListView?
   var lessonList: [Lesson] = []
-    
+
   override func loadView() {
     sView = LessonListView()
     view = sView
@@ -26,7 +26,7 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
       self.sView?.emptyLabel.isHidden = true
     }
   }
-    
+
   @objc func addedlesson() {
     getLessons()
     DispatchQueue.main.async {
@@ -35,11 +35,11 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
       self.sView?.emptyLabel.isHidden = true
     }
   }
-    
+
   func getLessons() {
-    let appdelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = appdelegate.persistentContainer.viewContext
-        
+    let manager = DBManager.shared.persistentContainer
+    let context = manager.viewContext
+
     let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
     do {
       let lessons = try context.fetch(fetchRequest)
@@ -55,7 +55,7 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
       }
     }
   }
-    
+
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return lessonList.count
   }
@@ -65,11 +65,11 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     cell.item = lessonList[indexPath.row]
     return cell
   }
-    
+
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
     if editingStyle == .delete {
-      let appdelegate = UIApplication.shared.delegate as! AppDelegate
-      let context = appdelegate.persistentContainer.viewContext
+      let manager = DBManager.shared.persistentContainer
+      let context = manager.viewContext
       var DeleteLesson = lessonList[indexPath.row]
       context.delete(DeleteLesson)
       NotificationCenter.default.post(name: NSNotification.Name("empty"), object: nil)

@@ -36,8 +36,8 @@ class GradeEntryVC: UIViewController {
   }
 
   func saveGrade(_ selectedOption: Lesson) {
-    let appdelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = appdelegate.persistentContainer.viewContext
+    let manager = DBManager.shared.persistentContainer
+    let context = manager.viewContext
     print("Seçilen değer: \(selectedOption)")
     let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
     fetchRequest.predicate = NSPredicate(format: "name == %@", selectedOption.name!)
@@ -86,8 +86,8 @@ class GradeEntryVC: UIViewController {
   }
 
   func fetchLessons() {
-    let appdelegate = UIApplication.shared.delegate as! AppDelegate
-    let context = appdelegate.persistentContainer.viewContext
+    let manager = DBManager.shared.persistentContainer
+    let context = manager.viewContext
 
     let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
     let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

@@ -1,42 +1,19 @@
-//
-//  OnboardingView.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 7.02.2024.
-//
+
 
 import UIKit
 
 class OnboardingView: UIView {
   var iconImage = UIImageView()
-  var onboardingTitle = UILabel()
-  var SignInButton = UIButton()
-  var SignUpButton = UIButton()
+  var onboardingTitle = CustomComponents.SemiBoldLabel(size: 30, text: "Register Your Lessons \n save your grades")
+  var SignInButton = CustomComponents.angledButton(text: "Sign In")
+  var SignUpButton = CustomComponents.angledButton(text: "Sign Up")
     
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
-    onboardingTitle.text = "Register Your Lessons \n save your grades"
-    onboardingTitle.font = UIFont(name: Constants.SemiBoldItalic, size: 30)
-    onboardingTitle.textAlignment = .center
-    onboardingTitle.textColor = .white
+    
     onboardingTitle.numberOfLines = 3
-        
-    SignInButton.setTitle("Sign In", for: .normal)
-    SignInButton.setTitleColor(.black, for: .normal)
-    SignInButton.backgroundColor = .white
-    SignInButton.layer.cornerRadius = 12
-    SignInButton.layer.borderWidth = 1
-    SignInButton.layer.borderColor = UIColor.green.cgColor
-    SignInButton.titleLabel?.font = UIFont(name: Constants.light, size: 25)
-        
-    SignUpButton.setTitle("Sign Up", for: .normal)
-    SignUpButton.setTitleColor(.black, for: .normal)
-    SignUpButton.backgroundColor = .white
-    SignUpButton.layer.cornerRadius = 12
-    SignUpButton.layer.borderWidth = 1
-    SignUpButton.layer.borderColor = UIColor.green.cgColor
-    SignUpButton.titleLabel?.font = UIFont(name: Constants.light, size: 25)
+    onboardingTitle.textAlignment = .center
         
     if let iconimage = UIImage(named: "originalIcon.png") {
       iconImage.image = iconimage

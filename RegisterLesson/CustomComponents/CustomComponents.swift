@@ -1,9 +1,3 @@
-//
-//  CustomComponents.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 8.02.2024.
-//
 
 import Foundation
 import UIKit
@@ -13,7 +7,7 @@ enum CustomComponents {
     let textfield = UITextField()
     textfield.translatesAutoresizingMaskIntoConstraints = false
     textfield.placeholder = placeholder
-    textfield.font = UIFont(name: Constants.light, size: 20)
+    textfield.font = .customScaledFont(CustomFontName: Constants.light)
     textfield.layer.cornerRadius = 30
     textfield.borderStyle = .line
     textfield.layer.borderWidth = 1.0
@@ -41,7 +35,8 @@ enum CustomComponents {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = text
-    label.font = UIFont(name: Constants.SemiBoldItalic, size: size)
+    label.font = UIFont.customScaledFont(CustomFontName: Constants.SemiBoldItalic)
+    label.adjustsFontForContentSizeCategory = true
     return label
   }
     
@@ -49,7 +44,9 @@ enum CustomComponents {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = text
-    label.font = UIFont(name: Constants.BoldItalic, size: size)
+    label.font = UIFont.customScaledFont(CustomFontName: Constants.BoldItalic)
+    label.adjustsFontForContentSizeCategory = true
+
     return label
   }
     
@@ -57,7 +54,8 @@ enum CustomComponents {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = text
-    label.font = UIFont(name: Constants.light, size: size)
+    label.font = UIFont.customScaledFont(CustomFontName: Constants.light)
+    label.adjustsFontForContentSizeCategory = true
     return label
   }
     
@@ -65,7 +63,37 @@ enum CustomComponents {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = text
-    label.font = UIFont(name: Constants.italic, size: size)
+    label.font = UIFont.customScaledFont(CustomFontName: Constants.italic)
+    label.adjustsFontForContentSizeCategory = true
     return label
+  }
+  
+  static func angledButton(text: String) -> UIButton {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle(text, for: .normal)
+    button.setTitleColor(.black, for: .normal)
+    button.backgroundColor = .white
+    button.layer.cornerRadius = 12
+    button.layer.borderWidth = 1
+    button.layer.borderColor = UIColor.green.cgColor
+    button.titleLabel?.font = UIFont.customScaledFont(CustomFontName: Constants.light)
+    button.titleLabel?.adjustsFontForContentSizeCategory = true
+    return button
+  }
+
+  static func circularButton(text: String) -> UIButton {
+    let button = UIButton()
+    button.translatesAutoresizingMaskIntoConstraints = false
+    button.setTitle(text, for: .normal)
+    button.setTitleColor(.white, for: .normal)
+    button.backgroundColor = .white
+    button.layer.cornerRadius = 30
+    button.layer.borderWidth = 1
+    button.layer.borderColor = UIColor.green.cgColor
+    button.backgroundColor = .orange
+    button.titleLabel?.font = UIFont.customScaledFont(CustomFontName: Constants.SemiBoldItalic)
+    button.titleLabel?.adjustsFontForContentSizeCategory = true
+    return button
   }
 }

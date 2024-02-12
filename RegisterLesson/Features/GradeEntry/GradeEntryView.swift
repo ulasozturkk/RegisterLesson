@@ -5,7 +5,7 @@ class GradeEntryView: UIView {
   var pickerView = UIPickerView()
   var gradeTextField = CustomComponents.createTextField(placeholder: "Enter Grade", isSecured: false)
   var tableView = UITableView()
-  var saveButton = UIButton()
+  var saveButton = CustomComponents.circularButton(text: "Save")
   var titleLabel = CustomComponents.BoldLabel(size: 20, text: "Choose a lesson and enter grade")
   var orLabel = CustomComponents.BoldLabel(size: 15, text: "Or Choose Here")
   var emptyLabel = CustomComponents.LightLabel(size: 30, text: "No lesson found")
@@ -16,10 +16,8 @@ class GradeEntryView: UIView {
     backgroundColor = .white
         
     pickerView.translatesAutoresizingMaskIntoConstraints = false
-    saveButton.translatesAutoresizingMaskIntoConstraints = false
     tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-    saveButton.setTitle("Save", for: .normal)
+    
     saveButton.setTitleColor(.white, for: .normal)
     saveButton.backgroundColor = .orange
     saveButton.layer.cornerRadius = 30

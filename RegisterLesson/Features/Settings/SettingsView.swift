@@ -1,9 +1,3 @@
-//
-//  SettingsView.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 8.02.2024.
-//
 
 import UIKit
 

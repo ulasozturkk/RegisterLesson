@@ -28,8 +28,8 @@ class SignUpVC: UIViewController {
   @objc func createAccount() {
     if sView?.usernameTextField.text != "" && sView?.passwordTextField.text != "" && sView?.confirmTextField.text != "" {
       if sView?.passwordTextField.text == sView?.confirmTextField.text {
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appdelegate.persistentContainer.viewContext
+        let manager = DBManager.shared.persistentContainer
+        let context = manager.viewContext
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
                 
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()

@@ -1,9 +1,3 @@
-//
-//  SettingsVC.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 8.02.2024.
-//
 
 import CoreData
 import UIKit
@@ -19,8 +13,8 @@ class SettingsVC: UIViewController {
     
   @objc func addLesson() {
     if sView?.lessonTextField.text != "" {
-      let appdelegate = UIApplication.shared.delegate as! AppDelegate
-      let context = appdelegate.persistentContainer.viewContext
+      let manager = DBManager.shared.persistentContainer
+      let context = manager.viewContext
       let lesson = NSEntityDescription.insertNewObject(forEntityName: "Lesson", into: context)
       let event = Notification.Name("add")
       NotificationCenter.default.post(name: event, object: nil)

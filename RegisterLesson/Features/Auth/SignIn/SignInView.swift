@@ -1,9 +1,3 @@
-//
-//  SignInView.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 7.02.2024.
-//
 
 import UIKit
 
@@ -15,7 +9,7 @@ class SignInView: UIView {
   var usernameTextField = CustomComponents.createTextField(placeholder: "Enter Your Username", isSecured: false)
   var passwordTextField = CustomComponents.createTextField(placeholder: "Enter Your Password", isSecured: true)
   var forgotPasswordLabel = UIButton()
-  var loginButton = UIButton()
+  var loginButton = CustomComponents.circularButton(text: "Sign In")
   //   var showPasswordButton = UIButton()
 
   override init(frame: CGRect) {
@@ -26,11 +20,6 @@ class SignInView: UIView {
     forgotPasswordLabel.setTitle("Forgot Password?", for: .normal)
     forgotPasswordLabel.setTitleColor(.systemBlue, for: .normal)
 
-    loginButton.setTitle("Sign In", for: .normal)
-    loginButton.backgroundColor = .orange
-    loginButton.setTitleColor(.white, for: .normal)
-    loginButton.layer.cornerRadius = 30
-
     addSubview(titleLabel)
     addSubview(usernameLabel)
     addSubview(usernameTextField)
@@ -40,7 +29,6 @@ class SignInView: UIView {
     addSubview(loginButton)
 
     forgotPasswordLabel.translatesAutoresizingMaskIntoConstraints = false
-    loginButton.translatesAutoresizingMaskIntoConstraints = false
 
     let sH = UIScreen.main.bounds.height
     let sW = UIScreen.main.bounds.width

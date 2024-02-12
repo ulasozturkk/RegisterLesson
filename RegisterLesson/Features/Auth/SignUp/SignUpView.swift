@@ -1,9 +1,3 @@
-//
-//  SignUpView.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 7.02.2024.
-//
 
 import UIKit
 
@@ -17,16 +11,11 @@ class SignUpView: UIView {
   var passwordTextField = CustomComponents.createTextField(placeholder: "Enter Password", isSecured: true)
   var confirmLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Confirm Password")
   var confirmTextField = CustomComponents.createTextField(placeholder: "Enter Password Again", isSecured: true)
-  var signUpButton = UIButton()
+  var signUpButton = CustomComponents.circularButton(text: "Create Account")
     
   override init(frame: CGRect) {
     super.init(frame: frame)
     backgroundColor = .white
-        
-    signUpButton.setTitle("Create Account", for: .normal)
-    signUpButton.backgroundColor = .orange
-    signUpButton.setTitleColor(.white, for: .normal)
-    signUpButton.layer.cornerRadius = 30
         
     addSubview(titleLabel)
     addSubview(descriptionLabel)

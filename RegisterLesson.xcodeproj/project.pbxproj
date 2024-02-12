@@ -10,17 +10,15 @@
 		5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFCD2B73A240007F6E0C /* AppDelegate.swift */; };
 		5256AFD82B73A240007F6E0C /* RegisterLesson.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFD62B73A240007F6E0C /* RegisterLesson.xcdatamodeld */; };
 		5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5256AFD92B73A241007F6E0C /* Assets.xcassets */; };
-		5256AFDD2B73A241007F6E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5256AFDB2B73A241007F6E0C /* LaunchScreen.storyboard */; };
-		5256AFE52B73A3BF007F6E0C /* DenemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFE42B73A3BF007F6E0C /* DenemeViewController.swift */; };
 		5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* Constants.swift */; };
 		5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */; };
 		5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */; };
+		526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EBD2B7A082F00E053EE /* DBManager.swift */; };
+		526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */; };
 		5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FA2B73F06A005B42F2 /* SignInView.swift */; };
 		5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FC2B73F075005B42F2 /* SignInVC.swift */; };
 		5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */; };
 		5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1002B73F0B8005B42F2 /* SignUpView.swift */; };
-		5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */; };
-		5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */; };
 		5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1082B74B19E005B42F2 /* CustomComponents.swift */; };
 		5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10A2B74E507005B42F2 /* TabBar.swift */; };
 		5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10F2B74E67F005B42F2 /* LessonListVC.swift */; };
@@ -38,21 +36,19 @@
 		5256AFCD2B73A240007F6E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5256AFD72B73A240007F6E0C /* RegisterLesson.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RegisterLesson.xcdatamodel; sourceTree = "<group>"; };
 		5256AFD92B73A241007F6E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5256AFDC2B73A241007F6E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5256AFDE2B73A241007F6E0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5256AFE42B73A3BF007F6E0C /* DenemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenemeViewController.swift; sourceTree = "<group>"; };
 		5256AFE72B73A4C1007F6E0C /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		5256AFE82B73A4DB007F6E0C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		5256AFEA2B73A528007F6E0C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		5256AFEC2B73A5DE007F6E0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		526E4EBD2B7A082F00E053EE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontExtension.swift; sourceTree = "<group>"; };
 		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5281A0FC2B73F075005B42F2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		5281A1002B73F0B8005B42F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
-		5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		5281A1062B73F93E005B42F2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5281A1082B74B19E005B42F2 /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 		5281A10A2B74E507005B42F2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -96,16 +92,15 @@
 		5256AFCC2B73A240007F6E0C /* RegisterLesson */ = {
 			isa = PBXGroup;
 			children = (
+				526E4EBC2B7A082300E053EE /* Manager */,
 				5281A1072B74B18E005B42F2 /* CustomComponents */,
 				5256AFEE2B73BFC2007F6E0C /* Features */,
 				5256AFEB2B73A5D1007F6E0C /* Constants */,
 				5256AFE62B73A4AF007F6E0C /* Fonts */,
 				5256AFCD2B73A240007F6E0C /* AppDelegate.swift */,
 				5256AFD92B73A241007F6E0C /* Assets.xcassets */,
-				5256AFDB2B73A241007F6E0C /* LaunchScreen.storyboard */,
 				5256AFDE2B73A241007F6E0C /* Info.plist */,
 				5256AFD62B73A240007F6E0C /* RegisterLesson.xcdatamodeld */,
-				5256AFE42B73A3BF007F6E0C /* DenemeViewController.swift */,
 			);
 			path = RegisterLesson;
 			sourceTree = "<group>";
@@ -151,10 +146,25 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		526E4EBC2B7A082300E053EE /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				526E4EBD2B7A082F00E053EE /* DBManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		526E4EBF2B7A0D1300E053EE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5281A0F62B73EEF0005B42F2 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				5281A0F92B73F04F005B42F2 /* ForgotPassword */,
 				5281A0F82B73F04A005B42F2 /* SignUp */,
 				5281A0F72B73F043005B42F2 /* SignIn */,
 			);
@@ -179,18 +189,10 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		5281A0F92B73F04F005B42F2 /* ForgotPassword */ = {
-			isa = PBXGroup;
-			children = (
-				5281A1022B73F0EC005B42F2 /* ForgotPasswordView.swift */,
-				5281A1042B73F0F9005B42F2 /* ForgotPasswordVC.swift */,
-			);
-			path = ForgotPassword;
-			sourceTree = "<group>";
-		};
 		5281A1072B74B18E005B42F2 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				526E4EBF2B7A0D1300E053EE /* Extensions */,
 				5281A1082B74B19E005B42F2 /* CustomComponents.swift */,
 			);
 			path = CustomComponents;
@@ -291,7 +293,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5256AFDD2B73A241007F6E0C /* LaunchScreen.storyboard in Resources */,
 				5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,8 +307,6 @@
 				5281A1182B74E6C0005B42F2 /* SettingsVC.swift in Sources */,
 				5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */,
 				5256AFD82B73A240007F6E0C /* RegisterLesson.xcdatamodeld in Sources */,
-				5281A1032B73F0EC005B42F2 /* ForgotPasswordView.swift in Sources */,
-				5281A1052B73F0F9005B42F2 /* ForgotPasswordVC.swift in Sources */,
 				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
@@ -320,7 +319,8 @@
 				5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */,
 				5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */,
 				5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */,
-				5256AFE52B73A3BF007F6E0C /* DenemeViewController.swift in Sources */,
+				526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */,
+				526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */,
 				5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */,
 				5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */,
 				5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */,
@@ -329,17 +329,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5256AFDB2B73A241007F6E0C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5256AFDC2B73A241007F6E0C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5256AFDF2B73A241007F6E0C /* Debug */ = {

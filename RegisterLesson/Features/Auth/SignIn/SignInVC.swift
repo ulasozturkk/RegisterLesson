@@ -20,8 +20,8 @@ class SignInVC: UIViewController {
 
   @objc func signIn() {
     if sView?.usernameTextField.text != "" && sView?.passwordTextField.text != "" {
-      let appdelegate = UIApplication.shared.delegate as! AppDelegate
-      let context = appdelegate.persistentContainer.viewContext
+      let manager = DBManager.shared.persistentContainer
+      let context = manager.viewContext
             
       let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
             
