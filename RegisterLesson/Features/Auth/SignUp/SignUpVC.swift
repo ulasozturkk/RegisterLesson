@@ -30,18 +30,19 @@ class SignUpVC: UIViewController {
       if sView?.passwordTextField.text == sView?.confirmTextField.text {
         let manager = DBManager.shared.persistentContainer
         let context = manager.viewContext
-        let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context)
-                
+        let user = User(context: context)
+        
+        
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", (sView?.usernameTextField.text)!)
             
         do {
           let users = try context.fetch(fetchRequest)
-        
+          
           guard let user = users.first else {
-            user.setValue(sView?.usernameTextField.text, forKey: "username")
-            user.setValue(sView?.passwordTextField.text, forKey: "password")
-            user.setValue(UUID(), forKey: "id")
+            user.username = sView?.usernameTextField.text
+            user.id = UUID()
+            user.password = sView?.passwordTextField.text
             do {
               try context.save()
               let alert = UIAlertController(title: "Success", message: "Your account created succesfully", preferredStyle: .alert)
