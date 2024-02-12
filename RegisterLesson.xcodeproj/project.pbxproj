@@ -19,6 +19,7 @@
 		526E4ECE2B7A2EFB00E053EE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ECC2B7A2EFB00E053EE /* User+CoreDataProperties.swift */; };
 		526E4ED12B7A2F0F00E053EE /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ECF2B7A2F0F00E053EE /* Lesson+CoreDataClass.swift */; };
 		526E4ED22B7A2F0F00E053EE /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ED02B7A2F0F00E053EE /* Lesson+CoreDataProperties.swift */; };
+		526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ED32B7A41BA00E053EE /* SessionManager.swift */; };
 		5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FA2B73F06A005B42F2 /* SignInView.swift */; };
 		5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FC2B73F075005B42F2 /* SignInVC.swift */; };
 		5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */; };
@@ -53,6 +54,7 @@
 		526E4ECC2B7A2EFB00E053EE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		526E4ECF2B7A2F0F00E053EE /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
 		526E4ED02B7A2F0F00E053EE /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		526E4ED32B7A41BA00E053EE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5281A0FC2B73F075005B42F2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				526E4EBD2B7A082F00E053EE /* DBManager.swift */,
+				526E4ED32B7A41BA00E053EE /* SessionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
 				526E4ECD2B7A2EFB00E053EE /* User+CoreDataClass.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
+				526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */,
 				5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */,
 				5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */,
 				5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */,

@@ -38,6 +38,7 @@ class SignInVC: UIViewController {
           return
         }
         if user.password == sView?.passwordTextField.text! {
+          SessionManager.shared.loginUser(user: user)
           print("giris basarili")
           navigationController?.pushViewController(TabBar(), animated: true)
         } else {
