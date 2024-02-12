@@ -40,11 +40,12 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     let manager = DBManager.shared.persistentContainer
     let context = manager.viewContext
 
-    let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
-    do {
-      let lessons = try context.fetch(fetchRequest)
-      lessonList = lessons
-    } catch {}
+    if let currentUser = SessionManager.shared.currentUser {
+      if let userLessons = currentUser.lessons {
+        let lessons = Array(userLessons) as! [Lesson]
+        lessonList = lessons
+      }
+    }
   }
 
   func isLessonEmpty() {
@@ -70,13 +71,14 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     if editingStyle == .delete {
       let manager = DBManager.shared.persistentContainer
       let context = manager.viewContext
+
       var DeleteLesson = lessonList[indexPath.row]
       context.delete(DeleteLesson)
-      NotificationCenter.default.post(name: NSNotification.Name("empty"), object: nil)
       do {
         try context.save()
         lessonList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
+        NotificationCenter.default.post(name: NSNotification.Name("empty"), object: nil)
         if lessonList.count == 0 {
           isLessonEmpty()
         }

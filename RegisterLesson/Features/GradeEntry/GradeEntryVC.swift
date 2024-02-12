@@ -39,32 +39,27 @@ class GradeEntryVC: UIViewController {
     let manager = DBManager.shared.persistentContainer
     let context = manager.viewContext
     print("Seçilen değer: \(selectedOption)")
-    let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
-    fetchRequest.predicate = NSPredicate(format: "name == %@", selectedOption.name!)
 
-    do {
-      let lessons = try context.fetch(fetchRequest)
-      if sView?.gradeTextField.text != "" {
-        if let updateLesson = lessons.first {
-          // bulundu
-          if let doubleGrade = Double((sView?.gradeTextField.text)!) {
-            updateLesson.grade = doubleGrade
-            do {
-              try context.save()
+    if let currentUser = SessionManager.shared.currentUser {
+      if let Userlessons = currentUser.lessons {
+        let lessons = Array(Userlessons) as! [Lesson]
+        if sView?.gradeTextField.text != "" {
+          if let updateLesson = lessons.first {
+            // bulduk
+            if let doubleGrade = Double((sView?.gradeTextField.text)!) {
+              updateLesson.grade = doubleGrade
+
+              try! context.save()
               NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enter"), object: nil)
-            } catch {
-              print("Error saving lesson: \(error)")
+            } else {
+              let alert = UIAlertController(title: "ERROR", message: "Grade Must be a number", preferredStyle: .alert)
+              let action = UIAlertAction(title: "OK", style: .cancel)
+              alert.addAction(action)
+              present(alert, animated: true)
             }
-          } else {
-            let alert = UIAlertController(title: "ERROR", message: "Grade Must be a number", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel)
-            alert.addAction(action)
-            present(alert, animated: true)
           }
         }
       }
-    } catch {
-      print("Error fetching lessons: \(error)")
     }
   }
 
@@ -89,15 +84,13 @@ class GradeEntryVC: UIViewController {
     let manager = DBManager.shared.persistentContainer
     let context = manager.viewContext
 
-    let fetchRequest: NSFetchRequest<Lesson> = Lesson.fetchRequest()
-    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-    fetchRequest.sortDescriptors = [sortDescriptor]
-    do {
-      let lessons = try context.fetch(fetchRequest)
-      data = lessons
-      isLessonEmpty()
-    } catch {
-      print("Error fetching lessons: \(error)")
+    if let currentUser = SessionManager.shared.currentUser {
+      if let userLessons = currentUser.lessons {
+        let lessons = Array(userLessons) as! [Lesson]
+        let sortedLessons = lessons.sorted { $0.name?.localizedCaseInsensitiveCompare($1.name ?? "") == .orderedAscending }
+        data = sortedLessons
+        isLessonEmpty()
+      }
     }
   }
 
