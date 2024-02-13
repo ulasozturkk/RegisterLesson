@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  RegisterLesson
 //
-//  Created by macbook pro on 12.02.2024.
+//  Created by macbook pro on 13.02.2024.
 //
 //
 
@@ -16,9 +16,9 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
+    @NSManaged public var username: String?
     @NSManaged public var id: UUID?
     @NSManaged public var password: String?
-    @NSManaged public var username: String?
     @NSManaged public var lessons: NSSet?
 
 }

@@ -11,6 +11,4 @@ class SessionManager {
     currentUser = user
   }
   
-  
-  
 }

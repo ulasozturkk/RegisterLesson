@@ -48,6 +48,10 @@ class GradeEntryVC: UIViewController {
             // bulduk
             if let doubleGrade = Double((sView?.gradeTextField.text)!) {
               updateLesson.grade = doubleGrade
+              let currentTime = Date()
+              let dateformatter = DateFormatter()
+              dateformatter.dateFormat = "dd/MM/yyyy HH:mm"
+              updateLesson.updateDate = dateformatter.string(from: currentTime)
 
               try! context.save()
               NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enter"), object: nil)
@@ -74,15 +78,13 @@ class GradeEntryVC: UIViewController {
   @objc func addedlesson() {
     DispatchQueue.main.async {
       self.fetchLessons()
-
+      
       self.sView?.pickerView.reloadAllComponents()
       self.sView?.tableView.reloadData()
     }
   }
 
   func fetchLessons() {
-    let manager = DBManager.shared.persistentContainer
-    let context = manager.viewContext
 
     if let currentUser = SessionManager.shared.currentUser {
       if let userLessons = currentUser.lessons {

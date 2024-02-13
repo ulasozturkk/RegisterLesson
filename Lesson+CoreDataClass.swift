@@ -2,7 +2,7 @@
 //  Lesson+CoreDataClass.swift
 //  RegisterLesson
 //
-//  Created by macbook pro on 12.02.2024.
+//  Created by macbook pro on 13.02.2024.
 //
 //
 

@@ -29,7 +29,6 @@ class SignInVC: UIViewController {
             
       do {
         let users = try context.fetch(fetchRequest)
-                
         guard let user = users.first else {
           let alert = UIAlertController(title: "ERROR", message: "User Not Found", preferredStyle: .alert)
           let action = UIAlertAction(title: "OK", style: .cancel)

@@ -1,4 +1,5 @@
 import CoreData
+import UIKit
 import Foundation
 
 class DBManager {
@@ -8,14 +9,21 @@ class DBManager {
   // MARK: - Core Data stack
 
   lazy var persistentContainer: NSPersistentContainer = {
-    let container = NSPersistentContainer(name: "RegisterLesson")
-    container.loadPersistentStores(completionHandler: { _, error in
-      if let error = error as NSError? {
-        fatalError("Unresolved error \(error), \(error.userInfo)")
-      }
-    })
-    return container
+      let container = NSPersistentContainer(name: "Model")
+      
+   
+
+      container.loadPersistentStores(completionHandler: { _, error in
+          if let error = error as NSError? {
+              fatalError("Unresolved error \(error), \(error.userInfo)")
+          }
+      })
+    print(container.persistentStoreCoordinator.persistentStores.first?.url)
+
+      
+      return container
   }()
+
 
   // MARK: - Core Data Saving support
 
