@@ -1,6 +1,6 @@
 import CoreData
-import UIKit
 import Foundation
+import UIKit
 
 class DBManager {
   static let shared = DBManager()
@@ -9,21 +9,17 @@ class DBManager {
   // MARK: - Core Data stack
 
   lazy var persistentContainer: NSPersistentContainer = {
-      let container = NSPersistentContainer(name: "Model")
-      
-   
+    let container = NSPersistentContainer(name: "Model")
 
-      container.loadPersistentStores(completionHandler: { _, error in
-          if let error = error as NSError? {
-              fatalError("Unresolved error \(error), \(error.userInfo)")
-          }
-      })
+    container.loadPersistentStores(completionHandler: { _, error in
+      if let error = error as NSError? {
+        fatalError("Unresolved error \(error), \(error.userInfo)")
+      }
+    })
     print(container.persistentStoreCoordinator.persistentStores.first?.url)
 
-      
-      return container
+    return container
   }()
-
 
   // MARK: - Core Data Saving support
 

@@ -20,8 +20,8 @@ class GradeEntryVC: UIViewController {
     let gestureRec = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
     view.addGestureRecognizer(gestureRec)
   }
-  
-  @objc func hideKeyboard(){
+
+  @objc func hideKeyboard() {
     view.endEditing(true)
   }
 
@@ -85,20 +85,19 @@ class GradeEntryVC: UIViewController {
   @objc func addedlesson() {
     DispatchQueue.main.async {
       self.fetchLessons()
-      
+
       self.sView?.pickerView.reloadAllComponents()
       self.sView?.tableView.reloadData()
     }
   }
 
   func fetchLessons() {
-
     if let currentUser = SessionManager.shared.currentUser {
       if let userLessons = currentUser.lessons {
         let lessons = Array(userLessons) as! [Lesson]
         let sortedLessons = lessons.sorted { $0.name?.localizedCaseInsensitiveCompare($1.name ?? "") == .orderedAscending }
         data = sortedLessons
-  
+
         isLessonEmpty()
       }
     }

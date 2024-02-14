@@ -2,7 +2,6 @@
 import UIKit
 
 class GradeEntryView: UIView {
-
   var pickerView = UIPickerView()
   var gradeTextField = CustomComponents.createTextField(placeholder: "Enter Grade", isSecured: false)
   var lessonPickerTextfield = CustomComponents.createTextField(placeholder: "Choose Lesson", isSecured: false)
@@ -17,7 +16,6 @@ class GradeEntryView: UIView {
     super.init(frame: frame)
     backgroundColor = .white
         
- 
     tableView.translatesAutoresizingMaskIntoConstraints = false
     
     saveButton.setTitleColor(.white, for: .normal)
@@ -38,8 +36,8 @@ class GradeEntryView: UIView {
       titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       lessonPickerTextfield.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: sH * 0.01),
       lessonPickerTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      lessonPickerTextfield.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor,multiplier: 0.08),
-      lessonPickerTextfield.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor,multiplier: 0.9),
+      lessonPickerTextfield.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
+      lessonPickerTextfield.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
       gradeTextField.topAnchor.constraint(equalTo: lessonPickerTextfield.bottomAnchor, constant: sH * 0.1),
       gradeTextField.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       gradeTextField.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),

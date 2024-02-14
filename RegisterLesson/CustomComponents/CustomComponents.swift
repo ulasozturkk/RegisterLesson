@@ -97,7 +97,7 @@ enum CustomComponents {
     return button
   }
   
-  static func createNotification(title:String, subtitle:String, body : String) {
+  static func createNotification(title: String, subtitle: String, body: String) {
     let notificationContent = UNMutableNotificationContent()
     notificationContent.title = title
     notificationContent.subtitle = subtitle
@@ -108,6 +108,5 @@ enum CustomComponents {
     
     let notification = UNNotificationRequest(identifier: "not", content: notificationContent, trigger: trigger)
     UNUserNotificationCenter.current().add(notification, withCompletionHandler: nil)
-    
   }
 }
