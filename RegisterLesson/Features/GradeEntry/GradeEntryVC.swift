@@ -12,10 +12,17 @@ class GradeEntryVC: UIViewController {
     sView?.tableView.dataSource = self
     sView?.pickerView.delegate = self
     sView?.pickerView.dataSource = self
+    sView?.lessonPickerTextfield.inputView = sView?.pickerView
     fetchLessons()
     NotificationCenter.default.addObserver(self, selector: #selector(addedlesson), name: NSNotification.Name(rawValue: "add"), object: nil)
     NotificationCenter.default.addObserver(self, selector: #selector(emptyLesson), name: NSNotification.Name(rawValue: "empty"), object: nil)
     sView?.saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+    let gestureRec = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+    view.addGestureRecognizer(gestureRec)
+  }
+  
+  @objc func hideKeyboard(){
+    view.endEditing(true)
   }
 
   @objc func saveButtonTapped() {
@@ -91,6 +98,7 @@ class GradeEntryVC: UIViewController {
         let lessons = Array(userLessons) as! [Lesson]
         let sortedLessons = lessons.sorted { $0.name?.localizedCaseInsensitiveCompare($1.name ?? "") == .orderedAscending }
         data = sortedLessons
+  
         isLessonEmpty()
       }
     }
@@ -99,14 +107,14 @@ class GradeEntryVC: UIViewController {
   func isLessonEmpty() {
     if data.isEmpty == true {
       DispatchQueue.main.async {
-        self.sView?.pickerView.isHidden = true
+        self.sView?.lessonPickerTextfield.isHidden = true
         self.sView?.emptyLabel.isHidden = false
         self.sView?.tableView.isHidden = true
         self.sView?.emptyTextLabel.isHidden = false
       }
     } else {
       sView?.emptyLabel.isHidden = true
-      sView?.pickerView.isHidden = false
+      sView?.lessonPickerTextfield.isHidden = false
       sView?.tableView.isHidden = false
       sView?.emptyTextLabel.isHidden = true
     }
@@ -140,6 +148,8 @@ extension GradeEntryVC: UIPickerViewDelegate, UIPickerViewDataSource, UITableVie
 
   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     let selectedOption = data[row]
+    sView?.lessonPickerTextfield.text = data[row].name
+    sView?.resignFirstResponder()
     saveGrade(selectedOption)
   }
 }
