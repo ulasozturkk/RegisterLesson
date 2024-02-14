@@ -51,7 +51,7 @@ class GradeEntryVC: UIViewController {
       if let Userlessons = currentUser.lessons {
         let lessons = Array(Userlessons) as! [Lesson]
         if sView?.gradeTextField.text != "" {
-          if let updateLesson = lessons.first {
+            let updateLesson = selectedOption
             // bulduk
             if let doubleGrade = Double((sView?.gradeTextField.text)!) {
               updateLesson.grade = doubleGrade
@@ -68,7 +68,7 @@ class GradeEntryVC: UIViewController {
               alert.addAction(action)
               present(alert, animated: true)
             }
-          }
+          
         }
       }
     }
