@@ -93,7 +93,7 @@ class GradeEntryVC: UIViewController {
   func fetchLessons() {
     if let currentUser = SessionManager.shared.currentUser {
       if let userLessons = currentUser.lessons {
-        let lessons = Array(userLessons) as! [Lesson]
+        let lessons = Array(userLessons) as! [Lesson] //nsset tipinde gelioyr onu cast ediyorum
         let sortedLessons = lessons.sorted { $0.name?.localizedCaseInsensitiveCompare($1.name ?? "") == .orderedAscending }
         data = sortedLessons
 

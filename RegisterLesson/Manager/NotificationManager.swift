@@ -12,7 +12,14 @@ class NotificationManager {
         notificationContent.body = body
         
         // İçeriği oluşturduk, şimdi zamanı belirleyeceğiz
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 22
+        dateComponents.minute = 23
+      
+        // uyuglamayı kapattıktan belirli bir süre sonra istiyorsan UN TIME INTERVAL KULLAN
+        // Spesifik date veriyorsan UN CALENDAR KULLLAN
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         let notification = UNNotificationRequest(identifier: "not", content: notificationContent, trigger: trigger)
         

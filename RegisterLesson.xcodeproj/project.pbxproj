@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521ACC072B7E99B400941225 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 521ACC062B7E99B400941225 /* Resources */; };
+		521ACC0A2B7EA1A100941225 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC092B7EA1A100941225 /* ProfileView.swift */; };
+		521ACC0C2B7EA1B000941225 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC0B2B7EA1B000941225 /* ProfileVC.swift */; };
 		5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFCD2B73A240007F6E0C /* AppDelegate.swift */; };
 		5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5256AFD92B73A241007F6E0C /* Assets.xcassets */; };
 		5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* Constants.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		521ACC062B7E99B400941225 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources; sourceTree = "<group>"; };
+		521ACC092B7EA1A100941225 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		521ACC0B2B7EA1B000941225 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		5256AFCA2B73A240007F6E0C /* RegisterLesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterLesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5256AFCD2B73A240007F6E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5256AFD92B73A241007F6E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,9 +107,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521ACC082B7EA18D00941225 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				521ACC092B7EA1A100941225 /* ProfileView.swift */,
+				521ACC0B2B7EA1B000941225 /* ProfileVC.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		5256AFC12B73A240007F6E0C = {
 			isa = PBXGroup;
 			children = (
+				521ACC062B7E99B400941225 /* Resources */,
 				52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */,
 				52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */,
 				5256AFCC2B73A240007F6E0C /* RegisterLesson */,
@@ -164,6 +180,7 @@
 		5256AFEE2B73BFC2007F6E0C /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				521ACC082B7EA18D00941225 /* Profile */,
 				5281A10E2B74E530005B42F2 /* Settings */,
 				5281A10D2B74E525005B42F2 /* GradeEntry */,
 				5281A10C2B74E514005B42F2 /* LessonList */,
@@ -374,6 +391,7 @@
 			files = (
 				5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */,
 				52DB604B2B7B8B8200216375 /* GoogleService-Info.plist in Resources */,
+				521ACC072B7E99B400941225 /* Resources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +411,7 @@
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
 				52B9893F2B7E2D2C00DA824B /* customTextField.swift in Sources */,
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
+				521ACC0C2B7EA1B000941225 /* ProfileVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
 				52B989392B7E0C9200DA824B /* User+CoreDataProperties.swift in Sources */,
 				52B989472B7E356900DA824B /* customLabel.swift in Sources */,
@@ -408,6 +427,7 @@
 				52B989492B7E381900DA824B /* NotificationManager.swift in Sources */,
 				52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */,
 				52B989242B7E084400DA824B /* User.swift in Sources */,
+				521ACC0A2B7EA1A100941225 /* ProfileView.swift in Sources */,
 				52B989412B7E302600DA824B /* customAngledButton.swift in Sources */,
 				526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */,
 				526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */,
