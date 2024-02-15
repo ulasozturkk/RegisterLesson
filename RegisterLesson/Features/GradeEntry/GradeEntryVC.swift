@@ -51,24 +51,23 @@ class GradeEntryVC: UIViewController {
       if let Userlessons = currentUser.lessons {
         let lessons = Array(Userlessons) as! [Lesson]
         if sView?.gradeTextField.text != "" {
-            let updateLesson = selectedOption
-            // bulduk
-            if let doubleGrade = Double((sView?.gradeTextField.text)!) {
-              updateLesson.grade = doubleGrade
-              let currentTime = Date()
-              let dateformatter = DateFormatter()
-              dateformatter.dateFormat = "dd/MM/yyyy HH:mm"
-              updateLesson.updateDate = dateformatter.string(from: currentTime)
+          let updateLesson = selectedOption
+          // bulduk
+          if let doubleGrade = Double((sView?.gradeTextField.text)!) {
+            updateLesson.grade = doubleGrade
+            let currentTime = Date()
+            let dateformatter = DateFormatter()
+            dateformatter.dateFormat = "dd/MM/yyyy HH:mm"
+            updateLesson.updateDate = dateformatter.string(from: currentTime)
 
-              try! context.save()
-              NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enter"), object: nil)
-            } else {
-              let alert = UIAlertController(title: "ERROR", message: "Grade Must be a number", preferredStyle: .alert)
-              let action = UIAlertAction(title: "OK", style: .cancel)
-              alert.addAction(action)
-              present(alert, animated: true)
-            }
-          
+            try! context.save()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enter"), object: nil)
+          } else {
+            let alert = UIAlertController(title: "ERROR", message: "Grade Must be a number", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel)
+            alert.addAction(action)
+            present(alert, animated: true)
+          }
         }
       }
     }
@@ -121,7 +120,9 @@ class GradeEntryVC: UIViewController {
 }
 
 extension GradeEntryVC: UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    sView?.lessonPickerTextfield.text = data[indexPath.row].name
+  }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return data.count
