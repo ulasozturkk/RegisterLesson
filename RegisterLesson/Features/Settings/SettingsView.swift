@@ -2,10 +2,10 @@
 import UIKit
 
 class SettingsView: UIView {
-  var titleLabel = CustomComponents.BoldLabel(size: 25, text: "Add Lesson")
-  var descriptionLabel = CustomComponents.ItalicLabel(size: 15, text: "Enter Lesson Name")
-  var lessonTextField = CustomComponents.createTextField(placeholder: "Lesson Name:", isSecured: false)
-  var addButton = CustomComponents.BackButton(systemImage: "plus")
+  var titleLabel = customLabel(text: "Add Lesson", fontName: Constants.BoldItalic)
+  var descriptionLabel = customLabel(text: "Enter Lesson Name", fontName: Constants.italic)
+  var lessonTextField = customTextField(placeHolderText: "Lesson Name", isSecured: false)
+  var addButton = customIconButton(symbolName: "plus")
 
   override init(frame: CGRect) {
     super.init(frame: frame)

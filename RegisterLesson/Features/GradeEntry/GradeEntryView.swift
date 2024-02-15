@@ -3,14 +3,14 @@ import UIKit
 
 class GradeEntryView: UIView {
   var pickerView = UIPickerView()
-  var gradeTextField = CustomComponents.createTextField(placeholder: "Enter Grade", isSecured: false)
-  var lessonPickerTextfield = CustomComponents.createTextField(placeholder: "Choose Lesson", isSecured: false)
+  var gradeTextField = customTextField(placeHolderText: "Enter Grade", isSecured: false)
+  var lessonPickerTextfield = customTextField(placeHolderText: "Choose a Lesson", isSecured: false)
   var tableView = UITableView()
-  var saveButton = CustomComponents.circularButton(text: "Save")
-  var titleLabel = CustomComponents.BoldLabel(size: 20, text: "Choose a lesson and enter grade")
-  var orLabel = CustomComponents.BoldLabel(size: 15, text: "Or Choose Here")
-  var emptyLabel = CustomComponents.LightLabel(size: 30, text: "No lesson found")
-  var emptyTextLabel = CustomComponents.LightLabel(size: 30, text: "No lesson found")
+  var saveButton = customCircularButton(title: "Save")
+  var titleLabel = customLabel(text: "Choose a lesson and enter grade", fontName: Constants.BoldItalic)
+  var orLabel = customLabel(text: "Or Choose Here", fontName: Constants.BoldItalic)
+  var emptyLabel = customLabel(text: "No lesson found", fontName: Constants.light)
+  var emptyTextLabel = customLabel(text: "No lesson found", fontName: Constants.light)
     
   override init(frame: CGRect) {
     super.init(frame: frame)

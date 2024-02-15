@@ -4,9 +4,9 @@ import UIKit
 
 class OnboardingView: UIView {
   var iconImage = UIImageView()
-  var onboardingTitle = CustomComponents.SemiBoldLabel(size: 30, text: "Register Your Lessons \n save your grades")
-  var SignInButton = CustomComponents.angledButton(text: "Sign In")
-  var SignUpButton = CustomComponents.angledButton(text: "Sign Up")
+  var onboardingTitle = customLabel(text: "Register Your Lessons \n save your grades", fontName: Constants.SemiBoldItalic)
+  var SignInButton = customAngledButton(title: "Sign In")
+  var SignUpButton = customAngledButton(title: "Sign Up")
     
   override init(frame: CGRect) {
     super.init(frame: frame)

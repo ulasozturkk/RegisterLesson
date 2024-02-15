@@ -36,6 +36,7 @@ class SettingsVC: UIViewController {
       let newLesson = Lesson(context: context)
       newLesson.name = lessonName
       currentUser.addToLessons(newLesson)
+      
 
       do {
         try context.save()

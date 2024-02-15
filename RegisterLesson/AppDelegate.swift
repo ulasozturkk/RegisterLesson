@@ -1,5 +1,4 @@
 import UIKit
-import UserNotifications
 import Firebase
 
 @main
@@ -50,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         if !notEntered.isEmpty {
-            CustomComponents.createNotification(title: "Error", subtitle: "Enter a Grade", body: "you did not enter grade for: \(notEntered)")
+            NotificationManager.createNotification(title: "Error", subtitle: "Enter a Grade", body: "you did not enter grade for: \(notEntered)")
         }
     }
     

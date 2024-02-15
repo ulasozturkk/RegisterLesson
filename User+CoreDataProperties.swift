@@ -1,26 +1,15 @@
-//
-//  User+CoreDataProperties.swift
-//  RegisterLesson
-//
-//  Created by macbook pro on 13.02.2024.
-//
-//
+
 
 import Foundation
 import CoreData
 
-
+// If you have an @NSManaged property, that property must be declared in the managed object model.
+// KAYNAK: https://stackoverflow.com/questions/46679527/what-is-core-data-doing-with-my-manually-written-nsmanaged-properties-i-get-th
 extension User {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<User> {
         return NSFetchRequest<User>(entityName: "User")
     }
-
-    @NSManaged public var username: String?
-    @NSManaged public var id: UUID?
-    @NSManaged public var password: String?
-    @NSManaged public var lessons: NSSet?
-
 }
 
 // MARK: Generated accessors for lessons

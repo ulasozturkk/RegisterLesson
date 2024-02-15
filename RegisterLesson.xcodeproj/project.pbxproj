@@ -19,7 +19,6 @@
 		5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FC2B73F075005B42F2 /* SignInVC.swift */; };
 		5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */; };
 		5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1002B73F0B8005B42F2 /* SignUpView.swift */; };
-		5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1082B74B19E005B42F2 /* CustomComponents.swift */; };
 		5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10A2B74E507005B42F2 /* TabBar.swift */; };
 		5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A10F2B74E67F005B42F2 /* LessonListVC.swift */; };
 		5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1112B74E69A005B42F2 /* LessonListView.swift */; };
@@ -29,15 +28,20 @@
 		5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A1192B74E6CE005B42F2 /* SettingsView.swift */; };
 		5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */; };
 		52B9891F2B7DF7C000DA824B /* Model-v1-to-v2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52B9891E2B7DF7BF00DA824B /* Model-v1-to-v2.xcmappingmodel */; };
+		52B989242B7E084400DA824B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989232B7E084400DA824B /* User.swift */; };
+		52B989372B7E0C9200DA824B /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */; };
+		52B989392B7E0C9200DA824B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */; };
+		52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9893A2B7E0D0C00DA824B /* Lesson.swift */; };
+		52B9893F2B7E2D2C00DA824B /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9893E2B7E2D2C00DA824B /* customTextField.swift */; };
+		52B989412B7E302600DA824B /* customAngledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989402B7E302600DA824B /* customAngledButton.swift */; };
+		52B989432B7E312900DA824B /* customCircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989422B7E312900DA824B /* customCircularButton.swift */; };
+		52B989452B7E344D00DA824B /* customIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989442B7E344D00DA824B /* customIconButton.swift */; };
+		52B989472B7E356900DA824B /* customLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989462B7E356900DA824B /* customLabel.swift */; };
+		52B989492B7E381900DA824B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989482B7E381900DA824B /* NotificationManager.swift */; };
 		52DB60392B7B7AA200216375 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 52DB60382B7B7AA200216375 /* FirebaseAnalytics */; };
 		52DB60442B7B7B1600216375 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 52DB60432B7B7B1600216375 /* FirebaseMessaging */; };
 		52DB604B2B7B8B8200216375 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */; };
 		52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60512B7BA7CF00216375 /* Model.xcdatamodeld */; };
-		52DB60582B7BA8A500216375 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60542B7BA8A500216375 /* User+CoreDataClass.swift */; };
-		52DB60592B7BA8A500216375 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60552B7BA8A500216375 /* User+CoreDataProperties.swift */; };
-		52DB605A2B7BA8A500216375 /* Lesson+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60562B7BA8A500216375 /* Lesson+CoreDataClass.swift */; };
-		52DB605B2B7BA8A500216375 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60572B7BA8A500216375 /* Lesson+CoreDataProperties.swift */; };
-		52FC2CE22B7CC9C3001C427B /* myButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FC2CE12B7CC9C3001C427B /* myButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +63,6 @@
 		5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		5281A1002B73F0B8005B42F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		5281A1062B73F93E005B42F2 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		5281A1082B74B19E005B42F2 /* CustomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomComponents.swift; sourceTree = "<group>"; };
 		5281A10A2B74E507005B42F2 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5281A10F2B74E67F005B42F2 /* LessonListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListVC.swift; sourceTree = "<group>"; };
 		5281A1112B74E69A005B42F2 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
@@ -70,14 +73,19 @@
 		5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		52B9891D2B7DF0BA00DA824B /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		52B9891E2B7DF7BF00DA824B /* Model-v1-to-v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model-v1-to-v2.xcmappingmodel"; sourceTree = "<group>"; };
+		52B989232B7E084400DA824B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52B9893A2B7E0D0C00DA824B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		52B9893E2B7E2D2C00DA824B /* customTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
+		52B989402B7E302600DA824B /* customAngledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAngledButton.swift; sourceTree = "<group>"; };
+		52B989422B7E312900DA824B /* customCircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCircularButton.swift; sourceTree = "<group>"; };
+		52B989442B7E344D00DA824B /* customIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customIconButton.swift; sourceTree = "<group>"; };
+		52B989462B7E356900DA824B /* customLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customLabel.swift; sourceTree = "<group>"; };
+		52B989482B7E381900DA824B /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		52DB60452B7B88E500216375 /* RegisterLesson.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RegisterLesson.entitlements; sourceTree = "<group>"; };
 		52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52DB60522B7BA7CF00216375 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		52DB60542B7BA8A500216375 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		52DB60552B7BA8A500216375 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		52DB60562B7BA8A500216375 /* Lesson+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataClass.swift"; sourceTree = "<group>"; };
-		52DB60572B7BA8A500216375 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		52FC2CE12B7CC9C3001C427B /* myButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +104,8 @@
 		5256AFC12B73A240007F6E0C = {
 			isa = PBXGroup;
 			children = (
-				52DB60542B7BA8A500216375 /* User+CoreDataClass.swift */,
-				52DB60552B7BA8A500216375 /* User+CoreDataProperties.swift */,
-				52DB60562B7BA8A500216375 /* Lesson+CoreDataClass.swift */,
-				52DB60572B7BA8A500216375 /* Lesson+CoreDataProperties.swift */,
+				52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */,
+				52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */,
 				5256AFCC2B73A240007F6E0C /* RegisterLesson */,
 				5256AFCB2B73A240007F6E0C /* Products */,
 				52DB60422B7B7B1600216375 /* Frameworks */,
@@ -117,6 +123,8 @@
 		5256AFCC2B73A240007F6E0C /* RegisterLesson */ = {
 			isa = PBXGroup;
 			children = (
+				52B989252B7E08D100DA824B /* CoreDataHelpers */,
+				52B989222B7E083300DA824B /* Models */,
 				52DB60452B7B88E500216375 /* RegisterLesson.entitlements */,
 				526E4EC62B7A2D9700E053EE /* Shared */,
 				526E4EBC2B7A082300E053EE /* Manager */,
@@ -180,6 +188,7 @@
 			children = (
 				526E4EBD2B7A082F00E053EE /* DBManager.swift */,
 				526E4ED32B7A41BA00E053EE /* SessionManager.swift */,
+				52B989482B7E381900DA824B /* NotificationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -230,8 +239,11 @@
 			isa = PBXGroup;
 			children = (
 				526E4EBF2B7A0D1300E053EE /* Extensions */,
-				5281A1082B74B19E005B42F2 /* CustomComponents.swift */,
-				52FC2CE12B7CC9C3001C427B /* myButton.swift */,
+				52B9893E2B7E2D2C00DA824B /* customTextField.swift */,
+				52B989402B7E302600DA824B /* customAngledButton.swift */,
+				52B989422B7E312900DA824B /* customCircularButton.swift */,
+				52B989442B7E344D00DA824B /* customIconButton.swift */,
+				52B989462B7E356900DA824B /* customLabel.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -270,6 +282,22 @@
 			children = (
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		52B989222B7E083300DA824B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52B989232B7E084400DA824B /* User.swift */,
+				52B9893A2B7E0D0C00DA824B /* Lesson.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52B989252B7E08D100DA824B /* CoreDataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreDataHelpers;
 			sourceTree = "<group>";
 		};
 		52DB60422B7B7B1600216375 /* Frameworks */ = {
@@ -358,28 +386,32 @@
 			files = (
 				5281A1182B74E6C0005B42F2 /* SettingsVC.swift in Sources */,
 				5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */,
-				52DB60592B7BA8A500216375 /* User+CoreDataProperties.swift in Sources */,
-				52DB605B2B7BA8A500216375 /* Lesson+CoreDataProperties.swift in Sources */,
 				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
+				52B989372B7E0C9200DA824B /* Lesson+CoreDataProperties.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
-				52DB60582B7BA8A500216375 /* User+CoreDataClass.swift in Sources */,
+				52B9893F2B7E2D2C00DA824B /* customTextField.swift in Sources */,
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
+				52B989392B7E0C9200DA824B /* User+CoreDataProperties.swift in Sources */,
+				52B989472B7E356900DA824B /* customLabel.swift in Sources */,
+				52B989452B7E344D00DA824B /* customIconButton.swift in Sources */,
 				526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */,
 				52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */,
 				5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */,
 				5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */,
-				5281A1092B74B19E005B42F2 /* CustomComponents.swift in Sources */,
 				5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */,
-				52FC2CE22B7CC9C3001C427B /* myButton.swift in Sources */,
 				5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */,
+				52B989432B7E312900DA824B /* customCircularButton.swift in Sources */,
 				5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */,
+				52B989492B7E381900DA824B /* NotificationManager.swift in Sources */,
+				52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */,
+				52B989242B7E084400DA824B /* User.swift in Sources */,
+				52B989412B7E302600DA824B /* customAngledButton.swift in Sources */,
 				526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */,
 				526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */,
 				52B9891F2B7DF7C000DA824B /* Model-v1-to-v2.xcmappingmodel in Sources */,
-				52DB605A2B7BA8A500216375 /* Lesson+CoreDataClass.swift in Sources */,
 				5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */,
 				5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */,
 				5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */,

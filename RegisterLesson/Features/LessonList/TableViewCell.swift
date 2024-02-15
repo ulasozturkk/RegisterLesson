@@ -4,8 +4,8 @@ import CoreData
 import UIKit
 
 class TableViewCell: UITableViewCell {
-  var lessonNameLabel = CustomComponents.SemiBoldLabel(size: 20, text: "")
-  var lessonGradeLabel = CustomComponents.LightLabel(size: 15, text: "")
+  var lessonNameLabel = customLabel(text: "", fontName: Constants.SemiBoldItalic)
+  var lessonGradeLabel = customLabel(text: "", fontName: Constants.light)
   var stackView = UIStackView()
 
   public var item: Lesson! {

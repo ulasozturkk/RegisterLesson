@@ -11,10 +11,10 @@ class DBManager {
   // uygulamanın object modelini tanımladık
   lazy var managedObjectModel: NSManagedObjectModel = {
     guard let modelURL = Bundle.main.url(forResource: "Model", withExtension: "momd") else {
-      fatalError("Error loading model from bundle")
+      fatalError("Error loading model ")
     }
     guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
-      fatalError("Error initializing managed object model from: \(modelURL)")
+      fatalError("Error initializing managed object model")
     }
     return managedObjectModel
   }()
@@ -33,6 +33,7 @@ class DBManager {
     let container = NSPersistentContainer(name: "Model")
 
     let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
+    // depolama-güncelleme işlemlerini yürüten class -> Coordinator
 
     do {
       let options = [NSInferMappingModelAutomaticallyOption: true,
@@ -68,4 +69,16 @@ class DBManager {
       }
     }
   }
+  
+  func addLesson(to user: User,lesson: Lesson){
+    user.addToLessons(lesson)
+    saveContext()
+  }
+  func removeLesson(to user: User, lesson : Lesson){
+    user.removeFromLessons(lesson)
+    saveContext()
+  }
+  
+  
+  
 }

@@ -2,16 +2,16 @@
 import UIKit
 
 class SignUpView: UIView {
-  var backButton = CustomComponents.BackButton(systemImage: "arrow.left")
-  var titleLabel = CustomComponents.BoldLabel(size: 30, text: "Create Account")
-  var descriptionLabel = CustomComponents.ItalicLabel(size: 20, text: "Enter Your Information")
-  var usernameLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Username")
-  var usernameTextField = CustomComponents.createTextField(placeholder: "Enter Your Username", isSecured: false)
-  var passwordLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Password")
-  var passwordTextField = CustomComponents.createTextField(placeholder: "Enter Password", isSecured: true)
-  var confirmLabel = CustomComponents.SemiBoldLabel(size: 15, text: "Confirm Password")
-  var confirmTextField = CustomComponents.createTextField(placeholder: "Enter Password Again", isSecured: true)
-  var signUpButton = CustomComponents.circularButton(text: "Create Account")
+  var backButton = customIconButton(symbolName: "arrow.left")
+  var titleLabel = customLabel(text: "Create Account", fontName: Constants.BoldItalic)
+  var descriptionLabel = customLabel(text: "Enter Your Information", fontName: Constants.italic)
+  var usernameLabel = customLabel(text: "Username", fontName: Constants.SemiBoldItalic)
+  var usernameTextField = customTextField(placeHolderText: "Enter Your Username", isSecured: false)
+  var passwordLabel = customLabel(text: "Password", fontName: Constants.SemiBoldItalic)
+  var passwordTextField = customTextField(placeHolderText: "Enter Your Password", isSecured: true)
+  var confirmLabel = customLabel(text: "Confirm Password", fontName: Constants.SemiBoldItalic)
+  var confirmTextField = customTextField(placeHolderText: "Confirm Password", isSecured: true)
+  var signUpButton = customCircularButton(title: "Create Account")
     
   override init(frame: CGRect) {
     super.init(frame: frame)
