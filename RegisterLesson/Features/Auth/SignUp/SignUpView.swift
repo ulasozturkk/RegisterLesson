@@ -3,13 +3,13 @@ import UIKit
 
 class SignUpView: UIView {
   var backButton = customIconButton(symbolName: "arrow.left")
-  var titleLabel = customLabel(text: "Create Account", fontName: Constants.BoldItalic)
-  var descriptionLabel = customLabel(text: "Enter Your Information", fontName: Constants.italic)
-  var usernameLabel = customLabel(text: "Username", fontName: Constants.SemiBoldItalic)
+  var titleLabel = customLabel(text: "Create Account", fontName: ConstantFonts.BoldItalic)
+  var descriptionLabel = customLabel(text: "Enter Your Information", fontName: ConstantFonts.italic)
+  var usernameLabel = customLabel(text: "Username", fontName: ConstantFonts.SemiBoldItalic)
   var usernameTextField = customTextField(placeHolderText: "Enter Your Username", isSecured: false)
-  var passwordLabel = customLabel(text: "Password", fontName: Constants.SemiBoldItalic)
+  var passwordLabel = customLabel(text: "Password", fontName: ConstantFonts.SemiBoldItalic)
   var passwordTextField = customTextField(placeHolderText: "Enter Your Password", isSecured: true)
-  var confirmLabel = customLabel(text: "Confirm Password", fontName: Constants.SemiBoldItalic)
+  var confirmLabel = customLabel(text: "Confirm Password", fontName: ConstantFonts.SemiBoldItalic)
   var confirmTextField = customTextField(placeHolderText: "Confirm Password", isSecured: true)
   var signUpButton = customCircularButton(title: "Create Account")
     

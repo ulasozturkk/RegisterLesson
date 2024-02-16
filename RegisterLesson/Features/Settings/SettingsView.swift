@@ -2,8 +2,8 @@
 import UIKit
 
 class SettingsView: UIView {
-  var titleLabel = customLabel(text: "Add Lesson", fontName: Constants.BoldItalic)
-  var descriptionLabel = customLabel(text: "Enter Lesson Name", fontName: Constants.italic)
+  var titleLabel = customLabel(text: "Add Lesson", fontName: ConstantFonts.BoldItalic)
+  var descriptionLabel = customLabel(text: "Enter Lesson Name", fontName: ConstantFonts.italic)
   var lessonTextField = customTextField(placeHolderText: "Lesson Name", isSecured: false)
   var addButton = customIconButton(symbolName: "plus")
 

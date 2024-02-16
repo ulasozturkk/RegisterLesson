@@ -25,7 +25,7 @@ class customAngledButton: UIButton {
     layer.cornerRadius = 12
     layer.borderWidth = 1
     layer.borderColor = UIColor.green.cgColor
-    titleLabel?.font = UIFont.customScaledFont(CustomFontName: Constants.light)
+    titleLabel?.font = UIFont.customScaledFont(CustomFontName: ConstantFonts.light)
     titleLabel?.adjustsFontSizeToFitWidth = true
   }
   

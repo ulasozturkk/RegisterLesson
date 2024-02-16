@@ -3,9 +3,9 @@ import UIKit
 
 class SignInView: UIView {
   var previousButton = customIconButton(symbolName: "arrow.left")
-  var titleLabel = customLabel(text: "Sign In", fontName: Constants.BoldItalic)
-  var usernameLabel = customLabel(text: "Username", fontName: Constants.SemiBoldItalic)
-  var passwordLabel = customLabel(text: "Password", fontName: Constants.SemiBoldItalic)
+  var titleLabel = customLabel(text: "Sign In", fontName: ConstantFonts.BoldItalic)
+  var usernameLabel = customLabel(text: "Username", fontName: ConstantFonts.SemiBoldItalic)
+  var passwordLabel = customLabel(text: "Password", fontName: ConstantFonts.SemiBoldItalic)
   var usernameTextField = customTextField(placeHolderText: "Enter Your Username", isSecured: false)
   var passwordTextField = customTextField(placeHolderText: "Enter Yout Password", isSecured: true)
   var forgotPasswordLabel = UIButton()

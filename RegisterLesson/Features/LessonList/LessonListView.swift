@@ -2,9 +2,9 @@
 import UIKit
 
 class LessonListView: UIView {
-  var titleLabel = customLabel(text: "Lesson List", fontName: Constants.BoldItalic)
+  var titleLabel = customLabel(text: "Lesson List", fontName: ConstantFonts.BoldItalic)
   var tableView = UITableView()
-  var emptyLabel = customLabel(text: "There is no lesson", fontName: Constants.light)
+  var emptyLabel = customLabel(text: "There is no lesson", fontName: ConstantFonts.light)
 
   override init(frame: CGRect) {
     super.init(frame: frame)

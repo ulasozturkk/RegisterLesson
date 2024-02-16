@@ -10,11 +10,21 @@
 		521ACC072B7E99B400941225 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 521ACC062B7E99B400941225 /* Resources */; };
 		521ACC0A2B7EA1A100941225 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC092B7EA1A100941225 /* ProfileView.swift */; };
 		521ACC0C2B7EA1B000941225 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC0B2B7EA1B000941225 /* ProfileVC.swift */; };
+		521ACC132B7EA59B00941225 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC0F2B7EA59B00941225 /* User+CoreDataProperties.swift */; };
+		521ACC152B7EA59B00941225 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC112B7EA59B00941225 /* Lesson+CoreDataProperties.swift */; };
+		521ACC172B7EA80200941225 /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC162B7EA80200941225 /* customImageView.swift */; };
+		521ACC1B2B7EABE900941225 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 521ACC1A2B7EABE900941225 /* SDWebImage */; };
+		521ACC1D2B7EABE900941225 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 521ACC1C2B7EABE900941225 /* SDWebImageMapKit */; };
 		5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFCD2B73A240007F6E0C /* AppDelegate.swift */; };
 		5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5256AFD92B73A241007F6E0C /* Assets.xcassets */; };
-		5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* Constants.swift */; };
+		5256AFED2B73A5DE007F6E0C /* ConstantFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* ConstantFonts.swift */; };
 		5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */; };
 		5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */; };
+		525785D62B7F3C0900BE55BB /* AvatarPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785D52B7F3C0900BE55BB /* AvatarPaths.swift */; };
+		525785D82B7F3F7700BE55BB /* SelectImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785D72B7F3F7700BE55BB /* SelectImageView.swift */; };
+		525785DA2B7F3FE500BE55BB /* SelectImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785D92B7F3FE500BE55BB /* SelectImageVC.swift */; };
+		525785DD2B7F42BB00BE55BB /* SelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785DC2B7F42BB00BE55BB /* SelectImageCell.swift */; };
+		525785DF2B7F43FB00BE55BB /* AvatarNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785DE2B7F43FB00BE55BB /* AvatarNames.swift */; };
 		526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EBD2B7A082F00E053EE /* DBManager.swift */; };
 		526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */; };
 		526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ED32B7A41BA00E053EE /* SessionManager.swift */; };
@@ -32,8 +42,6 @@
 		5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A11B2B74EF6E005B42F2 /* TableViewCell.swift */; };
 		52B9891F2B7DF7C000DA824B /* Model-v1-to-v2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 52B9891E2B7DF7BF00DA824B /* Model-v1-to-v2.xcmappingmodel */; };
 		52B989242B7E084400DA824B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989232B7E084400DA824B /* User.swift */; };
-		52B989372B7E0C9200DA824B /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */; };
-		52B989392B7E0C9200DA824B /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */; };
 		52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9893A2B7E0D0C00DA824B /* Lesson.swift */; };
 		52B9893F2B7E2D2C00DA824B /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9893E2B7E2D2C00DA824B /* customTextField.swift */; };
 		52B989412B7E302600DA824B /* customAngledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989402B7E302600DA824B /* customAngledButton.swift */; };
@@ -51,6 +59,10 @@
 		521ACC062B7E99B400941225 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = text; path = Resources; sourceTree = "<group>"; };
 		521ACC092B7EA1A100941225 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		521ACC0B2B7EA1B000941225 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		521ACC0D2B7EA55F00941225 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		521ACC0F2B7EA59B00941225 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		521ACC112B7EA59B00941225 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		521ACC162B7EA80200941225 /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
 		5256AFCA2B73A240007F6E0C /* RegisterLesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterLesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5256AFCD2B73A240007F6E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5256AFD92B73A241007F6E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +70,14 @@
 		5256AFE72B73A4C1007F6E0C /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		5256AFE82B73A4DB007F6E0C /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		5256AFEA2B73A528007F6E0C /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
-		5256AFEC2B73A5DE007F6E0C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5256AFEC2B73A5DE007F6E0C /* ConstantFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantFonts.swift; sourceTree = "<group>"; };
 		5256AFF02B73BFD9007F6E0C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		525785D52B7F3C0900BE55BB /* AvatarPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPaths.swift; sourceTree = "<group>"; };
+		525785D72B7F3F7700BE55BB /* SelectImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageView.swift; sourceTree = "<group>"; };
+		525785D92B7F3FE500BE55BB /* SelectImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageVC.swift; sourceTree = "<group>"; };
+		525785DC2B7F42BB00BE55BB /* SelectImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCell.swift; sourceTree = "<group>"; };
+		525785DE2B7F43FB00BE55BB /* AvatarNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarNames.swift; sourceTree = "<group>"; };
 		526E4EBD2B7A082F00E053EE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontExtension.swift; sourceTree = "<group>"; };
 		526E4ED32B7A41BA00E053EE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -80,8 +97,6 @@
 		52B9891D2B7DF0BA00DA824B /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		52B9891E2B7DF7BF00DA824B /* Model-v1-to-v2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model-v1-to-v2.xcmappingmodel"; sourceTree = "<group>"; };
 		52B989232B7E084400DA824B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52B9893A2B7E0D0C00DA824B /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		52B9893E2B7E2D2C00DA824B /* customTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
 		52B989402B7E302600DA824B /* customAngledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customAngledButton.swift; sourceTree = "<group>"; };
@@ -99,7 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521ACC1B2B7EABE900941225 /* SDWebImage in Frameworks */,
 				52DB60442B7B7B1600216375 /* FirebaseMessaging in Frameworks */,
+				521ACC1D2B7EABE900941225 /* SDWebImageMapKit in Frameworks */,
 				52DB60392B7B7AA200216375 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +127,7 @@
 		521ACC082B7EA18D00941225 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				525785DB2B7F429900BE55BB /* SelectAvatar */,
 				521ACC092B7EA1A100941225 /* ProfileView.swift */,
 				521ACC0B2B7EA1B000941225 /* ProfileVC.swift */,
 			);
@@ -119,9 +137,9 @@
 		5256AFC12B73A240007F6E0C = {
 			isa = PBXGroup;
 			children = (
+				521ACC0F2B7EA59B00941225 /* User+CoreDataProperties.swift */,
+				521ACC112B7EA59B00941225 /* Lesson+CoreDataProperties.swift */,
 				521ACC062B7E99B400941225 /* Resources */,
-				52B989332B7E0C9200DA824B /* Lesson+CoreDataProperties.swift */,
-				52B989352B7E0C9200DA824B /* User+CoreDataProperties.swift */,
 				5256AFCC2B73A240007F6E0C /* RegisterLesson */,
 				5256AFCB2B73A240007F6E0C /* Products */,
 				52DB60422B7B7B1600216375 /* Frameworks */,
@@ -172,7 +190,9 @@
 		5256AFEB2B73A5D1007F6E0C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				5256AFEC2B73A5DE007F6E0C /* Constants.swift */,
+				5256AFEC2B73A5DE007F6E0C /* ConstantFonts.swift */,
+				525785D52B7F3C0900BE55BB /* AvatarPaths.swift */,
+				525785DE2B7F43FB00BE55BB /* AvatarNames.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -198,6 +218,16 @@
 				5256AFF22B73BFE6007F6E0C /* OnboardingView.swift */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		525785DB2B7F429900BE55BB /* SelectAvatar */ = {
+			isa = PBXGroup;
+			children = (
+				525785D92B7F3FE500BE55BB /* SelectImageVC.swift */,
+				525785D72B7F3F7700BE55BB /* SelectImageView.swift */,
+				525785DC2B7F42BB00BE55BB /* SelectImageCell.swift */,
+			);
+			path = SelectAvatar;
 			sourceTree = "<group>";
 		};
 		526E4EBC2B7A082300E053EE /* Manager */ = {
@@ -261,6 +291,7 @@
 				52B989422B7E312900DA824B /* customCircularButton.swift */,
 				52B989442B7E344D00DA824B /* customIconButton.swift */,
 				52B989462B7E356900DA824B /* customLabel.swift */,
+				521ACC162B7EA80200941225 /* customImageView.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -343,6 +374,8 @@
 			packageProductDependencies = (
 				52DB60382B7B7AA200216375 /* FirebaseAnalytics */,
 				52DB60432B7B7B1600216375 /* FirebaseMessaging */,
+				521ACC1A2B7EABE900941225 /* SDWebImage */,
+				521ACC1C2B7EABE900941225 /* SDWebImageMapKit */,
 			);
 			productName = RegisterLesson;
 			productReference = 5256AFCA2B73A240007F6E0C /* RegisterLesson.app */;
@@ -374,6 +407,7 @@
 			mainGroup = 5256AFC12B73A240007F6E0C;
 			packageReferences = (
 				52DB60372B7B7AA200216375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 5256AFCB2B73A240007F6E0C /* Products */;
 			projectDirPath = "";
@@ -404,8 +438,9 @@
 			files = (
 				5281A1182B74E6C0005B42F2 /* SettingsVC.swift in Sources */,
 				5281A1102B74E67F005B42F2 /* LessonListVC.swift in Sources */,
+				525785D62B7F3C0900BE55BB /* AvatarPaths.swift in Sources */,
+				521ACC152B7EA59B00941225 /* Lesson+CoreDataProperties.swift in Sources */,
 				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
-				52B989372B7E0C9200DA824B /* Lesson+CoreDataProperties.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
@@ -413,9 +448,9 @@
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
 				521ACC0C2B7EA1B000941225 /* ProfileVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
-				52B989392B7E0C9200DA824B /* User+CoreDataProperties.swift in Sources */,
 				52B989472B7E356900DA824B /* customLabel.swift in Sources */,
 				52B989452B7E344D00DA824B /* customIconButton.swift in Sources */,
+				521ACC172B7EA80200941225 /* customImageView.swift in Sources */,
 				526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */,
 				52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */,
 				5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */,
@@ -423,17 +458,22 @@
 				5281A1122B74E69A005B42F2 /* LessonListView.swift in Sources */,
 				5281A1012B73F0B8005B42F2 /* SignUpView.swift in Sources */,
 				52B989432B7E312900DA824B /* customCircularButton.swift in Sources */,
+				525785DF2B7F43FB00BE55BB /* AvatarNames.swift in Sources */,
 				5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */,
+				525785DD2B7F42BB00BE55BB /* SelectImageCell.swift in Sources */,
 				52B989492B7E381900DA824B /* NotificationManager.swift in Sources */,
 				52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */,
 				52B989242B7E084400DA824B /* User.swift in Sources */,
 				521ACC0A2B7EA1A100941225 /* ProfileView.swift in Sources */,
 				52B989412B7E302600DA824B /* customAngledButton.swift in Sources */,
+				525785DA2B7F3FE500BE55BB /* SelectImageVC.swift in Sources */,
 				526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */,
 				526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */,
+				525785D82B7F3F7700BE55BB /* SelectImageView.swift in Sources */,
 				52B9891F2B7DF7C000DA824B /* Model-v1-to-v2.xcmappingmodel in Sources */,
+				521ACC132B7EA59B00941225 /* User+CoreDataProperties.swift in Sources */,
 				5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */,
-				5256AFED2B73A5DE007F6E0C /* Constants.swift in Sources */,
+				5256AFED2B73A5DE007F6E0C /* ConstantFonts.swift in Sources */,
 				5281A10B2B74E507005B42F2 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +680,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = exactVersion;
+				version = 5.18.11;
+			};
+		};
 		52DB60372B7B7AA200216375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -651,6 +699,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		521ACC1A2B7EABE900941225 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		521ACC1C2B7EABE900941225 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		52DB60382B7B7AA200216375 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52DB60372B7B7AA200216375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -667,10 +725,11 @@
 		52DB60512B7BA7CF00216375 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				521ACC0D2B7EA55F00941225 /* Model 3.xcdatamodel */,
 				52B9891D2B7DF0BA00DA824B /* Model 2.xcdatamodel */,
 				52DB60522B7BA7CF00216375 /* Model.xcdatamodel */,
 			);
-			currentVersion = 52B9891D2B7DF0BA00DA824B /* Model 2.xcdatamodel */;
+			currentVersion = 521ACC0D2B7EA55F00941225 /* Model 3.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

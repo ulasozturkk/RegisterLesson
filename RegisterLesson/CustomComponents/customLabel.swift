@@ -23,6 +23,7 @@ class customLabel: UILabel {
   func ConfigureLabel(){
     translatesAutoresizingMaskIntoConstraints = false
     adjustsFontForContentSizeCategory = true
+    numberOfLines = 3
   }
   
 }

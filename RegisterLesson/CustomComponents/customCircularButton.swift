@@ -25,7 +25,7 @@ class customCircularButton: UIButton {
     layer.cornerRadius = 30
     layer.borderWidth = 1
     layer.borderColor = UIColor.green.cgColor
-    titleLabel?.font = UIFont.customScaledFont(CustomFontName: Constants.SemiBoldItalic)
+    titleLabel?.font = UIFont.customScaledFont(CustomFontName: ConstantFonts.SemiBoldItalic)
     titleLabel?.adjustsFontForContentSizeCategory = true
   }
   

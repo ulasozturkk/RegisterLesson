@@ -70,15 +70,5 @@ class DBManager {
     }
   }
   
-  func addLesson(to user: User,lesson: Lesson){
-    user.addToLessons(lesson)
-    saveContext()
-  }
-  func removeLesson(to user: User, lesson : Lesson){
-    user.removeFromLessons(lesson)
-    saveContext()
-  }
-  
-  
   
 }

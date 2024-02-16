@@ -22,7 +22,7 @@ class customTextField: UITextField {
   
   func configureTextField(){
     translatesAutoresizingMaskIntoConstraints = false
-    font = .customScaledFont(CustomFontName: Constants.light)
+    font = .customScaledFont(CustomFontName: ConstantFonts.light)
     layer.cornerRadius = 30
     layer.borderWidth = 1.0
     layer.borderColor = UIColor.black.cgColor

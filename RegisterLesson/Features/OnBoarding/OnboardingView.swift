@@ -4,7 +4,7 @@ import UIKit
 
 class OnboardingView: UIView {
   var iconImage = UIImageView()
-  var onboardingTitle = customLabel(text: "Register Your Lessons \n save your grades", fontName: Constants.SemiBoldItalic)
+  var onboardingTitle = customLabel(text: "Register Your Lessons \n save your grades", fontName: ConstantFonts.SemiBoldItalic)
   var SignInButton = customAngledButton(title: "Sign In")
   var SignUpButton = customAngledButton(title: "Sign Up")
     

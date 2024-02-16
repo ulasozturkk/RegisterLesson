@@ -7,10 +7,10 @@ class GradeEntryView: UIView {
   var lessonPickerTextfield = customTextField(placeHolderText: "Choose a Lesson", isSecured: false)
   var tableView = UITableView()
   var saveButton = customCircularButton(title: "Save")
-  var titleLabel = customLabel(text: "Choose a lesson and enter grade", fontName: Constants.BoldItalic)
-  var orLabel = customLabel(text: "Or Choose Here", fontName: Constants.BoldItalic)
-  var emptyLabel = customLabel(text: "No lesson found", fontName: Constants.light)
-  var emptyTextLabel = customLabel(text: "No lesson found", fontName: Constants.light)
+  var titleLabel = customLabel(text: "Choose a lesson and enter grade", fontName: ConstantFonts.BoldItalic)
+  var orLabel = customLabel(text: "Or Choose Here", fontName: ConstantFonts.BoldItalic)
+  var emptyLabel = customLabel(text: "No lesson found", fontName: ConstantFonts.light)
+  var emptyTextLabel = customLabel(text: "No lesson found", fontName: ConstantFonts.light)
     
   override init(frame: CGRect) {
     super.init(frame: frame)
