@@ -2,6 +2,8 @@
 
 import UIKit
 
+
+
 class SelectImageView: UIView {
   
   var titleLabel = customLabel(text: "Choose one of these avatars", fontName: ConstantFonts.SemiBoldItalic)
@@ -9,7 +11,11 @@ class SelectImageView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
+    backgroundColor = .white
     addSubview(tableView)
+    addSubview(titleLabel)
+    tableView.translatesAutoresizingMaskIntoConstraints = false
+    tableView.rowHeight = UIScreen.main.bounds.height / 3
     
     let sH = UIScreen.main.bounds.height
     NSLayoutConstraint.activate([

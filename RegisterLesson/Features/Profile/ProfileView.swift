@@ -8,7 +8,7 @@ class ProfileView: UIView {
   let enterLabel = customLabel(text: "Enter your comments!", fontName: ConstantFonts.SemiBoldItalic)
   let commentLabel = customLabel(text: "Your Comments:", fontName: ConstantFonts.SemiBoldItalic)
   let enterCommentTextfield = customTextField(placeHolderText: "Enter Comment", isSecured: false)
-  let enteredTextLabel = customLabel(text: "", fontName: ConstantFonts.light)
+  var enteredTextLabel = customLabel(text: "", fontName: ConstantFonts.light)
   let saveButton = customCircularButton(title: "Save")
   
   override init(frame: CGRect) {

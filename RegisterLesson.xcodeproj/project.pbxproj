@@ -25,6 +25,7 @@
 		525785DA2B7F3FE500BE55BB /* SelectImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785D92B7F3FE500BE55BB /* SelectImageVC.swift */; };
 		525785DD2B7F42BB00BE55BB /* SelectImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785DC2B7F42BB00BE55BB /* SelectImageCell.swift */; };
 		525785DF2B7F43FB00BE55BB /* AvatarNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525785DE2B7F43FB00BE55BB /* AvatarNames.swift */; };
+		525785E22B7F604E00BE55BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 525785E12B7F604E00BE55BB /* Kingfisher */; };
 		526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EBD2B7A082F00E053EE /* DBManager.swift */; };
 		526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */; };
 		526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ED32B7A41BA00E053EE /* SessionManager.swift */; };
@@ -118,6 +119,7 @@
 				52DB60442B7B7B1600216375 /* FirebaseMessaging in Frameworks */,
 				521ACC1D2B7EABE900941225 /* SDWebImageMapKit in Frameworks */,
 				52DB60392B7B7AA200216375 /* FirebaseAnalytics in Frameworks */,
+				525785E22B7F604E00BE55BB /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +378,7 @@
 				52DB60432B7B7B1600216375 /* FirebaseMessaging */,
 				521ACC1A2B7EABE900941225 /* SDWebImage */,
 				521ACC1C2B7EABE900941225 /* SDWebImageMapKit */,
+				525785E12B7F604E00BE55BB /* Kingfisher */,
 			);
 			productName = RegisterLesson;
 			productReference = 5256AFCA2B73A240007F6E0C /* RegisterLesson.app */;
@@ -408,6 +411,7 @@
 			packageReferences = (
 				52DB60372B7B7AA200216375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				525785E02B7F604E00BE55BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 5256AFCB2B73A240007F6E0C /* Products */;
 			projectDirPath = "";
@@ -688,6 +692,14 @@
 				version = 5.18.11;
 			};
 		};
+		525785E02B7F604E00BE55BB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		52DB60372B7B7AA200216375 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -708,6 +720,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 521ACC192B7EABE900941225 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
+		};
+		525785E12B7F604E00BE55BB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 525785E02B7F604E00BE55BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		52DB60382B7B7AA200216375 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
