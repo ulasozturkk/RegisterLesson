@@ -11,3 +11,5 @@ enum AvatarPaths {
   
   static let avatars = [avatar1,avatar2,avatar3,avatar4,avatar5]
 }
+
+

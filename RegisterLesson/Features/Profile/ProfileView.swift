@@ -10,6 +10,8 @@ class ProfileView: UIView {
   let enterCommentTextfield = customTextField(placeHolderText: "Enter Comment", isSecured: false)
   var enteredTextLabel = customLabel(text: "", fontName: ConstantFonts.light)
   let saveButton = customCircularButton(title: "Save")
+  let changePasswordButton = customAngledButton(title: "Change Password",color: .orange,titleColor: .white)
+  let logOutButton = customAngledButton(title: "Log Out",color: .red,titleColor: .white)
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -23,6 +25,8 @@ class ProfileView: UIView {
     addSubview(enterCommentTextfield)
     addSubview(enteredTextLabel)
     addSubview(saveButton)
+    addSubview(changePasswordButton)
+    addSubview(logOutButton)
     
     let sH = UIScreen.main.bounds.height
     NSLayoutConstraint.activate([
@@ -58,6 +62,16 @@ class ProfileView: UIView {
       saveButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       saveButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
       saveButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+      
+      changePasswordButton.bottomAnchor.constraint(equalTo: logOutButton.topAnchor,constant: -(sH * 0.05)),
+      changePasswordButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+      changePasswordButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
+      changePasswordButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
+      
+      logOutButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor,constant: -(sH * 0.05)),
+      logOutButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+      logOutButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
+      logOutButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9)
       
     ])
   }

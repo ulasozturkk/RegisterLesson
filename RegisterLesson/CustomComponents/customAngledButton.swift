@@ -13,9 +13,12 @@ class customAngledButton: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  convenience init(title: String){
+  convenience init(title: String,color: UIColor? = nil,titleColor: UIColor? = nil){
     self.init(frame: .zero)
     self.setTitle(title, for: .normal)
+    self.backgroundColor = color ?? .white
+    self.setTitleColor(titleColor ?? .black, for: .normal)
+    
   }
   
   func configureButton(){
