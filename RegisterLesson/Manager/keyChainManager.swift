@@ -30,15 +30,15 @@ class KeyChainManager {
     print("data added on keychain successfully")
   }
   
-  func readDataFromKeyChain(key: String) -> Data?{ // kaydettiğimiz değere key üzerinden erişmemiz gerek
-    let query : [String : Any] = [
+  func readDataFromKeyChain(key: String) -> Data? { // kaydettiğimiz değere key üzerinden erişmemiz gerek
+    let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword,
-      kSecAttrAccount as String : key,
-      kSecReturnData as String : true // write dan farkı bu KSECRETURNDATA (data dönüyor mu)
+      kSecAttrAccount as String: key,
+      kSecReturnData as String: true // write dan farkı bu KSECRETURNDATA (data dönüyor mu)
     ]
-    var item : CFTypeRef? // generic obje referansı
+    var item: CFTypeRef? // generic obje referansı
     let status = SecItemCopyMatching(query as CFDictionary, &item) // REFERANS TİPİ OLDUĞU İÇİN POİNTER VERMEMİZ
-    guard status == errSecSuccess , let data = item as? Data else {
+    guard status == errSecSuccess, let data = item as? Data else {
       print("error fetching data... you will give nil")
       return nil
     }
@@ -46,9 +46,9 @@ class KeyChainManager {
   }
   
   func deleteDataFromKeyChain(key: String) { // yine key üzerinden dataya erişeceğiz
-    let query : [ String : Any] = [
-      kSecClass as String : kSecClassGenericPassword,
-      kSecAttrAccount as String : key
+    let query: [String: Any] = [
+      kSecClass as String: kSecClassGenericPassword,
+      kSecAttrAccount as String: key
     ]
     var status = SecItemDelete(query as CFDictionary)
     guard status == errSecSuccess else {
@@ -60,4 +60,3 @@ class KeyChainManager {
 
 // burdaki dictionary tipimiz NSDictionary değil CFDictionary, çünkü keychain tipine uyumlu çalışan bu
 // nedeni ise Foundation Frameworkünün C dili ile yazılmış olması hatta o yüzden & referans kullandık
-

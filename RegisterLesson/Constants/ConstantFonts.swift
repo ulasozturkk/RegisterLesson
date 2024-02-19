@@ -7,4 +7,3 @@ enum ConstantFonts {
   static let SemiBoldItalic = "GillSans-SemiBoldItalic"
   static let BoldItalic = "GillSans-BoldItalic"
 }
-

@@ -15,20 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
     
+    // MARK: UI REGISTER
+    
     let userLoggedInData = KeyChainManager.shared.readDataFromKeyChain(key: "isUserLoggedIn")?.withUnsafeBytes { $0.load(as: Bool.self) }
     
     if userLoggedInData == false || userLoggedInData == nil {
-      
       let navigation = UINavigationController(rootViewController: OnboardingVC())
       window?.rootViewController = navigation
     } else {
       let currentUserName = SessionManager.shared.currentUser
       if currentUserName != nil {
-
         let context = DBManager.shared.persistentContainer.viewContext
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@", currentUserName! )
+        fetchRequest.predicate = NSPredicate(format: "username == %@", currentUserName!)
         do {
           let users = try context.fetch(fetchRequest)
           guard let user = users.first else { return false }
@@ -36,11 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {}
         let navigation = UINavigationController(rootViewController: TabBar())
         window?.rootViewController = navigation
-      }else {
+      } else {
         let navigation = UINavigationController(rootViewController: OnboardingVC())
         window?.rootViewController = navigation
       }
-      
     }
     window?.makeKeyAndVisible()
         

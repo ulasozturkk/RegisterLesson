@@ -1,7 +1,7 @@
-//import Foundation
-//import UIKit
+// import Foundation
+// import UIKit
 //
-//class DownloadManager {
+// class DownloadManager {
 //  let imageFolderName = "Images"
 //  init() {
 //          createImageFolderIfNeeded()
@@ -21,12 +21,12 @@
 //     }
 //  func downloadImages(from url: URL,withFileName fileName : String , completion: @escaping (Bool) -> ()) {
 //          let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//              
+//
 //            if let error = error {
 //              print(error.localizedDescription)
 //              completion(false)
 //            }
-//            
+//
 //            guard let data = data else {
 //              completion(false)
 //              return
@@ -44,7 +44,7 @@
 //      print("error converting image")
 //      return
 //    }
-//    
+//
 //    if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
 //      let imageFolderURL = documentDirectory.appendingPathComponent(imageFolderName)
 //      let fileURL = imageFolderURL.appendingPathComponent(fileName)
@@ -56,7 +56,7 @@
 //      }
 //    }
 //  }
-//  
+//
 //  func loadImagesFromDisk() -> [UIImage] {
 //          var images: [UIImage] = []
 //
@@ -88,4 +88,4 @@
 //          return images
 //  }
 //
-//}
+// }
