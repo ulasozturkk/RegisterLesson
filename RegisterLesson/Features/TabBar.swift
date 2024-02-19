@@ -5,12 +5,18 @@ class TabBar: UITabBarController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    self.tabBar.tintColor = .orange
+
     let LessonListVC = LessonListVC()
     let GradeEntryVC = GradeEntryVC()
     let SettingsVC = SettingsVC()
     let ProfileVC = ProfileVC()
 
     navigationItem.hidesBackButton = true
+    let lineView = UIView(frame: CGRect(x: 0, y: 0, width: tabBar.frame.size.width, height: 1))
+    lineView.backgroundColor = .orange
+
+    tabBar.addSubview(lineView)
 
     viewControllers = [LessonListVC, GradeEntryVC, SettingsVC, ProfileVC]
 
