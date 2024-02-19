@@ -22,7 +22,9 @@ class ProfileVC: UIViewController , ImageTransferDelegate {
   
   @objc func logout(){
     // MARK: TODO
-    UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+    var isUserLoggedIn = false
+    var userLoggedInData = withUnsafeBytes(of: &isUserLoggedIn) { Data($0)}
+    KeyChainManager.shared.saveToKeyChain(data: userLoggedInData  , key: "isUserLoggedIn")
     print("logging out...")
     SessionManager.shared.currentUser = nil
     navigationController?.pushViewController(OnboardingVC(), animated: true)

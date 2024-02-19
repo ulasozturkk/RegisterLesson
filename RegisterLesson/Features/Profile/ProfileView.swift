@@ -58,12 +58,12 @@ class ProfileView: UIView {
       enteredTextLabel.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
       enteredTextLabel.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
       
-      saveButton.topAnchor.constraint(equalTo: enterCommentTextfield.bottomAnchor, constant: sH * 0.05),
+      saveButton.topAnchor.constraint(equalTo: enterCommentTextfield.bottomAnchor, constant: sH * 0.01),
       saveButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       saveButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
       saveButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
       
-      changePasswordButton.bottomAnchor.constraint(equalTo: logOutButton.topAnchor,constant: -(sH * 0.05)),
+      changePasswordButton.bottomAnchor.constraint(equalTo: logOutButton.topAnchor,constant: -(sH * 0.02)),
       changePasswordButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
       changePasswordButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
       changePasswordButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),

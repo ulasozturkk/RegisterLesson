@@ -13,6 +13,7 @@
 		521ACC132B7EA59B00941225 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC0F2B7EA59B00941225 /* User+CoreDataProperties.swift */; };
 		521ACC152B7EA59B00941225 /* Lesson+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC112B7EA59B00941225 /* Lesson+CoreDataProperties.swift */; };
 		521ACC172B7EA80200941225 /* customImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521ACC162B7EA80200941225 /* customImageView.swift */; };
+		5250A20B2B83C4F800D6ED16 /* keyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250A20A2B83C4F800D6ED16 /* keyChainManager.swift */; };
 		5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFCD2B73A240007F6E0C /* AppDelegate.swift */; };
 		5256AFDA2B73A241007F6E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5256AFD92B73A241007F6E0C /* Assets.xcassets */; };
 		5256AFED2B73A5DE007F6E0C /* ConstantFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5256AFEC2B73A5DE007F6E0C /* ConstantFonts.swift */; };
@@ -30,7 +31,6 @@
 		526EDF642B8328B60015A8BB /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */; };
 		526EDF662B832A3A0015A8BB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF652B832A3A0015A8BB /* UIViewExtension.swift */; };
 		526EDF6A2B83355D0015A8BB /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF692B83355D0015A8BB /* DownloadManager.swift */; };
-		526EDF6D2B833E970015A8BB /* DownloadURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF6C2B833E970015A8BB /* DownloadURLSession.swift */; };
 		526EDF6F2B835DE30015A8BB /* DownloadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF6E2B835DE30015A8BB /* DownloadImages.swift */; };
 		52722CC92B8385DD001562B4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52722CC82B8385DD001562B4 /* Kingfisher */; };
 		52722CCC2B8385EB001562B4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52722CCB2B8385EB001562B4 /* Alamofire */; };
@@ -70,6 +70,7 @@
 		521ACC0F2B7EA59B00941225 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		521ACC112B7EA59B00941225 /* Lesson+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lesson+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		521ACC162B7EA80200941225 /* customImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customImageView.swift; sourceTree = "<group>"; };
+		5250A20A2B83C4F800D6ED16 /* keyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keyChainManager.swift; sourceTree = "<group>"; };
 		5256AFCA2B73A240007F6E0C /* RegisterLesson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RegisterLesson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5256AFCD2B73A240007F6E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5256AFD92B73A241007F6E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		526EDF652B832A3A0015A8BB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		526EDF692B83355D0015A8BB /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
-		526EDF6C2B833E970015A8BB /* DownloadURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadURLSession.swift; sourceTree = "<group>"; };
 		526EDF6E2B835DE30015A8BB /* DownloadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImages.swift; sourceTree = "<group>"; };
 		52722CDB2B838B0F001562B4 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -239,7 +239,6 @@
 		525785DB2B7F429900BE55BB /* SelectAvatar */ = {
 			isa = PBXGroup;
 			children = (
-				526EDF6B2B833E880015A8BB /* Services */,
 				525785D92B7F3FE500BE55BB /* SelectImageVC.swift */,
 				525785D72B7F3F7700BE55BB /* SelectImageView.swift */,
 				525785DC2B7F42BB00BE55BB /* SelectImageCell.swift */,
@@ -256,6 +255,7 @@
 				526EDF692B83355D0015A8BB /* DownloadManager.swift */,
 				526EDF6E2B835DE30015A8BB /* DownloadImages.swift */,
 				52722CDB2B838B0F001562B4 /* UserManager.swift */,
+				5250A20A2B83C4F800D6ED16 /* keyChainManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -283,14 +283,6 @@
 				526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */,
 			);
 			path = ChangePassword;
-			sourceTree = "<group>";
-		};
-		526EDF6B2B833E880015A8BB /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				526EDF6C2B833E970015A8BB /* DownloadURLSession.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		52722CD82B83862B001562B4 /* Frameworks */ = {
@@ -497,6 +489,7 @@
 				521ACC0C2B7EA1B000941225 /* ProfileVC.swift in Sources */,
 				5256AFF32B73BFE6007F6E0C /* OnboardingView.swift in Sources */,
 				52B989472B7E356900DA824B /* customLabel.swift in Sources */,
+				5250A20B2B83C4F800D6ED16 /* keyChainManager.swift in Sources */,
 				52B989452B7E344D00DA824B /* customIconButton.swift in Sources */,
 				521ACC172B7EA80200941225 /* customImageView.swift in Sources */,
 				526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */,
@@ -513,7 +506,6 @@
 				52B989492B7E381900DA824B /* NotificationManager.swift in Sources */,
 				52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */,
 				52722CDC2B838B0F001562B4 /* UserManager.swift in Sources */,
-				526EDF6D2B833E970015A8BB /* DownloadURLSession.swift in Sources */,
 				52B989242B7E084400DA824B /* User.swift in Sources */,
 				521ACC0A2B7EA1A100941225 /* ProfileView.swift in Sources */,
 				526EDF6F2B835DE30015A8BB /* DownloadImages.swift in Sources */,
@@ -664,6 +656,7 @@
 				DEVELOPMENT_TEAM = 2758CUH3C2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RegisterLesson/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = FirebaseAppDelegateProxyEnabled;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -692,6 +685,7 @@
 				DEVELOPMENT_TEAM = 2758CUH3C2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RegisterLesson/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = FirebaseAppDelegateProxyEnabled;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
