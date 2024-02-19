@@ -29,6 +29,9 @@
 		526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EBD2B7A082F00E053EE /* DBManager.swift */; };
 		526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */; };
 		526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E4ED32B7A41BA00E053EE /* SessionManager.swift */; };
+		526EDF622B8328A90015A8BB /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF612B8328A90015A8BB /* ChangePasswordView.swift */; };
+		526EDF642B8328B60015A8BB /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */; };
+		526EDF662B832A3A0015A8BB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF652B832A3A0015A8BB /* UIViewExtension.swift */; };
 		5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FA2B73F06A005B42F2 /* SignInView.swift */; };
 		5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FC2B73F075005B42F2 /* SignInVC.swift */; };
 		5281A0FF2B73F0AC005B42F2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */; };
@@ -82,6 +85,9 @@
 		526E4EBD2B7A082F00E053EE /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontExtension.swift; sourceTree = "<group>"; };
 		526E4ED32B7A41BA00E053EE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		526EDF612B8328A90015A8BB /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
+		526EDF652B832A3A0015A8BB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		5281A0FC2B73F075005B42F2 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		5281A0FE2B73F0AC005B42F2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		521ACC082B7EA18D00941225 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				526EDF602B8328940015A8BB /* ChangePassword */,
 				525785DB2B7F429900BE55BB /* SelectAvatar */,
 				521ACC092B7EA1A100941225 /* ProfileView.swift */,
 				521ACC0B2B7EA1B000941225 /* ProfileVC.swift */,
@@ -246,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */,
+				526EDF652B832A3A0015A8BB /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +263,15 @@
 			children = (
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		526EDF602B8328940015A8BB /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				526EDF612B8328A90015A8BB /* ChangePasswordView.swift */,
+				526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 		5281A0F62B73EEF0005B42F2 /* Auth */ = {
@@ -447,6 +464,8 @@
 				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
+				526EDF642B8328B60015A8BB /* ChangePasswordVC.swift in Sources */,
+				526EDF622B8328A90015A8BB /* ChangePasswordView.swift in Sources */,
 				5256AFCE2B73A240007F6E0C /* AppDelegate.swift in Sources */,
 				52B9893F2B7E2D2C00DA824B /* customTextField.swift in Sources */,
 				5256AFF12B73BFD9007F6E0C /* OnboardingVC.swift in Sources */,
@@ -456,6 +475,7 @@
 				52B989452B7E344D00DA824B /* customIconButton.swift in Sources */,
 				521ACC172B7EA80200941225 /* customImageView.swift in Sources */,
 				526E4ED42B7A41BA00E053EE /* SessionManager.swift in Sources */,
+				526EDF662B832A3A0015A8BB /* UIViewExtension.swift in Sources */,
 				52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */,
 				5281A1142B74E6A5005B42F2 /* GradeEntryView.swift in Sources */,
 				5281A11C2B74EF6E005B42F2 /* TableViewCell.swift in Sources */,

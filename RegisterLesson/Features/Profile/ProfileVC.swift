@@ -13,17 +13,17 @@ class ProfileVC: UIViewController , ImageTransferDelegate {
     sView?.saveButton.addTarget(self, action: #selector(saveData), for: .touchUpInside)
     sView?.changePasswordButton.addTarget(self, action: #selector(changePassword), for: .touchUpInside)
     sView?.logOutButton.addTarget(self, action: #selector(logout), for: .touchUpInside)
-    
   }
   
   @objc func changePassword(){
     // MARK: TODO
-    // change password logic
+    navigationController?.pushViewController(ChangePasswordVC(), animated: true)
   }
   
   @objc func logout(){
     // MARK: TODO
     UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+    print("logging out...")
     SessionManager.shared.currentUser = nil
     navigationController?.pushViewController(OnboardingVC(), animated: true)
   }

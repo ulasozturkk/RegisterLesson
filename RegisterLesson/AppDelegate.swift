@@ -28,8 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - UI Register
       
     window = UIWindow(frame: UIScreen.main.bounds)
-   // UserDefaults.standard.set(false, forKey: "isUserLoggedIn") // kullanıcı giriş yapmış mı
-   // UserDefaults.standard.set(false, forKey: "haveUserEntered") // kullanıcı daha önce şifre girmiş mi
     
     if let isUserLoggedIn = UserDefaults.standard.value(forKey: "isUserLoggedIn") as? Bool , isUserLoggedIn == false {
       // kullanıcı oturumu acık degil
