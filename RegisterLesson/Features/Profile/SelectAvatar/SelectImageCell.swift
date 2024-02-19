@@ -6,10 +6,10 @@ class SelectImageCell: UITableViewCell {
   var avatarImage = customImageView(imagePath: "")
   var avatarNameLabel = customLabel(text: "", fontName: ConstantFonts.italic)
   
-  public var image: UIImageView? {
+  public var avatarimage: UIImageView? {
           didSet {
-              if let actualImage = image {
-                avatarImage.image = actualImage.image
+            if let actualImage = avatarimage?.image {
+                avatarImage.image = actualImage
               }
           }
       }

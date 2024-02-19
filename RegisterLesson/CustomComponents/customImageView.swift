@@ -1,6 +1,6 @@
 
 import UIKit
-import SDWebImage
+
 
 class customImageView: UIImageView {
 
@@ -15,18 +15,12 @@ class customImageView: UIImageView {
   
   convenience init(imagePath:String){
     self.init(frame: .zero)
-    if let url = URL(string: imagePath){
-      sd_setImage(with: url) { image, error , cacheType, Url in
-        if let downloadedImage = image as UIImage? {
-          self.image = downloadedImage
-        }
-        if let error = error {
-          print(error.localizedDescription)
-        }
-      }
-    }
-    
-
+  
+  }
+  
+  convenience init(image: UIImage){
+    self.init(frame: .zero)
+    self.image = image
   }
   
   func configureImageView(){

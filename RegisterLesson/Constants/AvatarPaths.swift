@@ -10,6 +10,7 @@ enum AvatarPaths {
   static let avatar5 = "https://cdn.pixabay.com/photo/2016/04/01/10/04/amusing-1299757_1280.png"
   
   static let avatars = [avatar1,avatar2,avatar3,avatar4,avatar5]
+  static let avatarURLS = [URL(string: avatar1),URL(string: avatar2),URL(string: avatar3),URL(string: avatar4),URL(string: avatar5),]
 }
 
 

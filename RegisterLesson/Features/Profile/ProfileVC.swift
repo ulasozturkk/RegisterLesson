@@ -1,6 +1,6 @@
 
 import UIKit
-import SDWebImage
+
 
 class ProfileVC: UIViewController , ImageTransferDelegate {
   

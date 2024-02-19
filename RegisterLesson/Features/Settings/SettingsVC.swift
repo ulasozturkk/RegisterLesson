@@ -35,7 +35,7 @@ class SettingsVC: UIViewController {
 
       let newLesson = Lesson(context: context)
       newLesson.name = lessonName
-      currentUser.addToLessons(newLesson)
+      UserManager.shared.addLessonToUser(user: SessionManager.shared.currentUser!, lesson: newLesson)
       
 
       do {
