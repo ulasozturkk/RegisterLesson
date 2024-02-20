@@ -15,49 +15,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    // MARK: UI REGISTER
-    
     let userLoggedInData = KeyChainManager.shared.readDataFromKeyChain(key: "isUserLoggedIn")?.withUnsafeBytes { $0.load(as: Bool.self) }
     
     if userLoggedInData == false || userLoggedInData == nil {
-      let navigation = UINavigationController(rootViewController: OnboardingVC()) //TODO: login
+      let navigation = UINavigationController(rootViewController: SignInVC()) // TODO: login
       window?.rootViewController = navigation
     } else {
       let context = DBManager.shared.persistentContainer.viewContext
-      let currentUserName = SessionManager.shared.currentUser
-      
-      if currentUserName != nil {
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "username == %@", currentUserName!)
+      let currentUserName = KeyChainManager.shared.readDataFromKeyChain(key: "username")
+      if let currentUserName = currentUserName {
+        let currentUserNameString = String(data: currentUserName, encoding: .utf8)
+        let fetchRequset: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequset.predicate = NSPredicate(format: "username == %@", currentUserNameString!)
         do {
-          let users = try context.fetch(fetchRequest)
-          guard let user = users.first else { return false }
-          SessionManager.shared.loginUser(user: user)
-        } catch {}
-        let navigation = UINavigationController(rootViewController: TabBar())
-        window?.rootViewController = navigation
-        
-      } else {
-        let username = KeyChainManager.shared.readDataFromKeyChain(key: "username")
-        if let username = username {
-          let usernameString = String(data: username, encoding: .utf8)
-          if let usernameString = usernameString {
-            let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@", usernameString)
-            
-            let users = UserManager.shared.fetchAllUsers()
-            guard let user = users.first else {
-              let navigation = UINavigationController(rootViewController: OnboardingVC())
-              window?.rootViewController = navigation
-              window?.makeKeyAndVisible()
-              return true
-            }
-            SessionManager.shared.loginUser(user: user)
-            
-            let navigation = UINavigationController(rootViewController: TabBar())
+          let users = try context.fetch(fetchRequset)
+          guard let user = users.first else {
+            let navigation = UINavigationController(rootViewController: SignInVC())
             window?.rootViewController = navigation
+            return true
           }
-        }
+          SessionManager.shared.loginUser(user: user)
+          let navigation = UINavigationController(rootViewController: TabBar())
+          window?.rootViewController = navigation
+        } catch {}
       }
     }
     window?.makeKeyAndVisible()

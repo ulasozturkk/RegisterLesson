@@ -60,6 +60,7 @@
 		52DB604B2B7B8B8200216375 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */; };
 		52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60512B7BA7CF00216375 /* Model.xcdatamodeld */; };
 		52F3DF832B847FBA0091CC7B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DF822B847FBA0091CC7B /* FileManager.swift */; };
+		52F3DF852B84BC260091CC7B /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DF842B84BC260091CC7B /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52DB60522B7BA7CF00216375 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		52F3DF822B847FBA0091CC7B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		52F3DF842B84BC260091CC7B /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			children = (
 				526E4EC02B7A0D2500E053EE /* DynamicFontExtension.swift */,
 				526EDF652B832A3A0015A8BB /* UIViewExtension.swift */,
+				52F3DF842B84BC260091CC7B /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -435,8 +438,8 @@
 			);
 			mainGroup = 5256AFC12B73A240007F6E0C;
 			packageReferences = (
-				52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
-				52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				52722CCD2B838617001562B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5256AFCB2B73A240007F6E0C /* Products */;
@@ -471,6 +474,7 @@
 				525785D62B7F3C0900BE55BB /* AvatarPaths.swift in Sources */,
 				521ACC152B7EA59B00941225 /* Lesson+CoreDataProperties.swift in Sources */,
 				5281A11A2B74E6CE005B42F2 /* SettingsView.swift in Sources */,
+				52F3DF852B84BC260091CC7B /* UIImageViewExtension.swift in Sources */,
 				5281A0FB2B73F06A005B42F2 /* SignInView.swift in Sources */,
 				5281A0FD2B73F075005B42F2 /* SignInVC.swift in Sources */,
 				526EDF642B8328B60015A8BB /* ChangePasswordVC.swift in Sources */,
@@ -719,7 +723,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -727,7 +731,7 @@
 				minimumVersion = 7.11.0;
 			};
 		};
-		52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -748,12 +752,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		52722CC82B8385DD001562B4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = 52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		52722CCB2B8385EB001562B4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = 52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		52722CCE2B838617001562B4 /* FirebaseAnalytics */ = {

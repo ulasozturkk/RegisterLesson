@@ -16,7 +16,7 @@ class SignInVC: UIViewController {
   }
 
   @objc func goPrevious() {
-    navigationController?.popViewController(animated: true)
+    navigationController?.pushViewController(OnboardingVC(), animated: true)
   }
 
   @objc func signInButtonTapped() {

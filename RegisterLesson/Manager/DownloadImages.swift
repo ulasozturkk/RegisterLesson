@@ -25,16 +25,14 @@ class ImageDownloader {
     }.resume()
   }
 
-  func downloadWithAlamofire(url: URL, completion: @escaping (UIImage?, Data?) -> Void) {
+  func downloadWithAlamofire(url: URL, completion: @escaping (Data?) -> Void) {
     AF.request(url).responseData { response in
       switch response.result {
       case .success(let data):
-
-        let image = UIImage(data: data)
-        completion(image, data)
+        completion(data)
       case .failure(let error):
         print(error.localizedDescription)
-        completion(nil, nil)
+        completion(nil)
       }
     }
   }
