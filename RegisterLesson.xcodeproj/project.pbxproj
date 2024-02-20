@@ -30,7 +30,6 @@
 		526EDF622B8328A90015A8BB /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF612B8328A90015A8BB /* ChangePasswordView.swift */; };
 		526EDF642B8328B60015A8BB /* ChangePasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */; };
 		526EDF662B832A3A0015A8BB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF652B832A3A0015A8BB /* UIViewExtension.swift */; };
-		526EDF6A2B83355D0015A8BB /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF692B83355D0015A8BB /* DownloadManager.swift */; };
 		526EDF6F2B835DE30015A8BB /* DownloadImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526EDF6E2B835DE30015A8BB /* DownloadImages.swift */; };
 		52722CC92B8385DD001562B4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 52722CC82B8385DD001562B4 /* Kingfisher */; };
 		52722CCC2B8385EB001562B4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 52722CCB2B8385EB001562B4 /* Alamofire */; };
@@ -60,6 +59,7 @@
 		52B989492B7E381900DA824B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B989482B7E381900DA824B /* NotificationManager.swift */; };
 		52DB604B2B7B8B8200216375 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */; };
 		52DB60532B7BA7CF00216375 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DB60512B7BA7CF00216375 /* Model.xcdatamodeld */; };
+		52F3DF832B847FBA0091CC7B /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3DF822B847FBA0091CC7B /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,7 +92,6 @@
 		526EDF612B8328A90015A8BB /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordVC.swift; sourceTree = "<group>"; };
 		526EDF652B832A3A0015A8BB /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		526EDF692B83355D0015A8BB /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		526EDF6E2B835DE30015A8BB /* DownloadImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImages.swift; sourceTree = "<group>"; };
 		52722CDB2B838B0F001562B4 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		5281A0FA2B73F06A005B42F2 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -121,6 +120,7 @@
 		52DB60452B7B88E500216375 /* RegisterLesson.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RegisterLesson.entitlements; sourceTree = "<group>"; };
 		52DB604A2B7B8B8200216375 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52DB60522B7BA7CF00216375 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		52F3DF822B847FBA0091CC7B /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,6 @@
 				5256AFCC2B73A240007F6E0C /* RegisterLesson */,
 				5256AFCB2B73A240007F6E0C /* Products */,
 				AFC3EE3D0BBA305822941E72 /* Pods */,
-				52722CD82B83862B001562B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,12 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				526E4EBD2B7A082F00E053EE /* DBManager.swift */,
+				526EDF6E2B835DE30015A8BB /* DownloadImages.swift */,
+				5250A20A2B83C4F800D6ED16 /* keyChainManager.swift */,
+				52722CDB2B838B0F001562B4 /* UserManager.swift */,
+				52F3DF822B847FBA0091CC7B /* FileManager.swift */,
 				526E4ED32B7A41BA00E053EE /* SessionManager.swift */,
 				52B989482B7E381900DA824B /* NotificationManager.swift */,
-				526EDF692B83355D0015A8BB /* DownloadManager.swift */,
-				526EDF6E2B835DE30015A8BB /* DownloadImages.swift */,
-				52722CDB2B838B0F001562B4 /* UserManager.swift */,
-				5250A20A2B83C4F800D6ED16 /* keyChainManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -283,13 +282,6 @@
 				526EDF632B8328B60015A8BB /* ChangePasswordVC.swift */,
 			);
 			path = ChangePassword;
-			sourceTree = "<group>";
-		};
-		52722CD82B83862B001562B4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5281A0F62B73EEF0005B42F2 /* Auth */ = {
@@ -443,8 +435,8 @@
 			);
 			mainGroup = 5256AFC12B73A240007F6E0C;
 			packageReferences = (
-				52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 				52722CCD2B838617001562B4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5256AFCB2B73A240007F6E0C /* Products */;
@@ -504,6 +496,7 @@
 				5281A1162B74E6B3005B42F2 /* GradeEntryVC.swift in Sources */,
 				525785DD2B7F42BB00BE55BB /* SelectImageCell.swift in Sources */,
 				52B989492B7E381900DA824B /* NotificationManager.swift in Sources */,
+				52F3DF832B847FBA0091CC7B /* FileManager.swift in Sources */,
 				52B9893B2B7E0D0C00DA824B /* Lesson.swift in Sources */,
 				52722CDC2B838B0F001562B4 /* UserManager.swift in Sources */,
 				52B989242B7E084400DA824B /* User.swift in Sources */,
@@ -513,7 +506,6 @@
 				525785DA2B7F3FE500BE55BB /* SelectImageVC.swift in Sources */,
 				526E4EBE2B7A082F00E053EE /* DBManager.swift in Sources */,
 				526E4EC12B7A0D2500E053EE /* DynamicFontExtension.swift in Sources */,
-				526EDF6A2B83355D0015A8BB /* DownloadManager.swift in Sources */,
 				525785D82B7F3F7700BE55BB /* SelectImageView.swift in Sources */,
 				52B9891F2B7DF7C000DA824B /* Model-v1-to-v2.xcmappingmodel in Sources */,
 				521ACC132B7EA59B00941225 /* User+CoreDataProperties.swift in Sources */,
@@ -727,7 +719,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -735,7 +727,7 @@
 				minimumVersion = 7.11.0;
 			};
 		};
-		52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -756,12 +748,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		52722CC82B8385DD001562B4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 52722CC72B8385DD001562B4 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		52722CCB2B8385EB001562B4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 52722CCA2B8385EB001562B4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 		52722CCE2B838617001562B4 /* FirebaseAnalytics */ = {

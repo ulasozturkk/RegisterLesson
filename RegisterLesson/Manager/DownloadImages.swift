@@ -12,6 +12,7 @@ import UIKit
 class ImageDownloader {
   static let shared = ImageDownloader()
   private init() {}
+  var dataList: [Data] = []
 
   func downloadImage(url: URL, completion: @escaping (UIImage?) -> Void) {
     URLSession.shared.dataTask(with: url) { data, _, error in
@@ -24,15 +25,16 @@ class ImageDownloader {
     }.resume()
   }
 
-  func downloadWithAlamofire(url: URL, completion: @escaping (UIImage?) -> Void) {
+  func downloadWithAlamofire(url: URL, completion: @escaping (UIImage?, Data?) -> Void) {
     AF.request(url).responseData { response in
       switch response.result {
       case .success(let data):
+
         let image = UIImage(data: data)
-        completion(image)
+        completion(image, data)
       case .failure(let error):
         print(error.localizedDescription)
-        completion(nil)
+        completion(nil, nil)
       }
     }
   }

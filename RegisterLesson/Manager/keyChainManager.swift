@@ -7,13 +7,13 @@ class KeyChainManager {
   
   func saveToKeyChain(data: Data, key: String) {
     // önce query oluştur
-    var query: [String: Any] = [
+    let query: [String: Any] = [
       kSecClass as String: kSecClassGenericPassword, // öğe türü
       kSecAttrAccount as String: key, // tutacağımız key değeri
       kSecValueData as String: data // tutacağımız value
     ]
     
-    var status = SecItemAdd(query as CFDictionary, nil)
+    let status = SecItemAdd(query as CFDictionary, nil)
     guard status == errSecSuccess || status == errSecDuplicateItem else {
       print("error saving data on keyChain")
       return

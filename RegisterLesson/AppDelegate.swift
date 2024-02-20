@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let userLoggedInData = KeyChainManager.shared.readDataFromKeyChain(key: "isUserLoggedIn")?.withUnsafeBytes { $0.load(as: Bool.self) }
     
     if userLoggedInData == false || userLoggedInData == nil {
-      let navigation = UINavigationController(rootViewController: OnboardingVC())
+      let navigation = UINavigationController(rootViewController: OnboardingVC()) //TODO: login
       window?.rootViewController = navigation
     } else {
+      let context = DBManager.shared.persistentContainer.viewContext
       let currentUserName = SessionManager.shared.currentUser
+      
       if currentUserName != nil {
-        let context = DBManager.shared.persistentContainer.viewContext
-        
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "username == %@", currentUserName!)
         do {
@@ -36,9 +36,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {}
         let navigation = UINavigationController(rootViewController: TabBar())
         window?.rootViewController = navigation
+        
       } else {
-        let navigation = UINavigationController(rootViewController: OnboardingVC())
-        window?.rootViewController = navigation
+        let username = KeyChainManager.shared.readDataFromKeyChain(key: "username")
+        if let username = username {
+          let usernameString = String(data: username, encoding: .utf8)
+          if let usernameString = usernameString {
+            let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@", usernameString)
+            
+            let users = UserManager.shared.fetchAllUsers()
+            guard let user = users.first else {
+              let navigation = UINavigationController(rootViewController: OnboardingVC())
+              window?.rootViewController = navigation
+              window?.makeKeyAndVisible()
+              return true
+            }
+            SessionManager.shared.loginUser(user: user)
+            
+            let navigation = UINavigationController(rootViewController: TabBar())
+            window?.rootViewController = navigation
+          }
+        }
       }
     }
     window?.makeKeyAndVisible()

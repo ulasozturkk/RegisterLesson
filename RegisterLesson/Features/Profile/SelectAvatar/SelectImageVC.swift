@@ -24,34 +24,48 @@ class SelectImageVC: UIViewController {
     sView?.tableView.register(SelectImageCell.self, forCellReuseIdentifier: "ProfileCell")
   }
   
-  func downloadImages() {
-    //    for path in avatarPathList {
-    //      let image = UIImageView()
-    //      image.kf.setImage(with: URL(string: path))
-    //      avatarImageViewList.append(image)
-    //    }
+  func downloadImages() { // 
+    var avatarImageData: [Data] = []
     
-//    for url in AvatarPaths.avatarURLS {
-//      if let url = url {
-//        ImageDownloader.shared.downloadImage(url: url, completion: { [weak self] image in
-//          guard let self = self else { return }
-//          let imageView = UIImageView()
-//          imageView.image = image ?? UIImage(named: "selectImage")
-//          self.avatarImageViewList.append(imageView)
-//          DispatchQueue.main.async {
-//            self.sView?.tableView.reloadData()
-//          }
-//        })
-//      }
-//    }
+    let cachedImages = CacheManager.shared.readDataFromFile(folderName: "images")
+    if let cachedImages = cachedImages {
+      avatarImageData = cachedImages
+    }
     
-    for url in AvatarPaths.avatarURLS {
-      if let url = url {
-        ImageDownloader.shared.downloadWithAlamofire(url: url) { [weak self] image in
-          guard let self = self else { return }
+    if avatarImageData.isEmpty == true {
+      // liste boş, network isteği yapacağız
+      CacheManager.shared.createDirectoryAndFolder(folderName: "images") // folder oluşturduk
+      // network isteği attık ve her datayı bir data listesine append ettk
+      print("network isteği atılıyor")
+      for url in AvatarPaths.avatarURLS {
+        if let url = url {
+          ImageDownloader.shared.downloadWithAlamofire(url: url) { [weak self] image, data in
+            guard let self = self else { return }
+            if let data = data {
+              avatarImageData.append(data)
+              CacheManager.shared.writeDataToFile(folderName: "images", fileName: url.lastPathComponent, data: data)
+            }
+            let imageView = UIImageView()
+            imageView.image = image ?? UIImage(named: "selectImage")
+            self.avatarImageViewList.append(imageView)
+            DispatchQueue.main.async {
+              self.sView?.tableView.reloadData()
+            }
+          }
+        }
+      }
+     
+    } else {
+      // zaten bellekte resimler mevcut, network isteği atmaya gerek yok
+      // dataları oku
+      let datalist = CacheManager.shared.readDataFromFile(folderName: "images")
+      print("data dosyadan çekiliyor...")
+      if let datalist = datalist {
+        for data in datalist {
+          let image = UIImage(data: data)
           let imageView = UIImageView()
           imageView.image = image ?? UIImage(named: "selectImage")
-          self.avatarImageViewList.append(imageView)
+          avatarImageViewList.append(imageView)
           DispatchQueue.main.async {
             self.sView?.tableView.reloadData()
           }

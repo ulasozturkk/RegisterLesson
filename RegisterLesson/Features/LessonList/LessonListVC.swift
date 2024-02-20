@@ -8,6 +8,8 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
   override func loadView() {
     sView = LessonListView()
+
+    
     view = sView
     sView?.tableView.delegate = self
     sView?.tableView.dataSource = self
