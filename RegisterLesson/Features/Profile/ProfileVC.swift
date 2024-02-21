@@ -23,13 +23,14 @@ class ProfileVC: UIViewController, ImageTransferDelegate {
     // MARK: TODO
 
     var isUserLoggedIn = false
-    var userLoggedInData = withUnsafeBytes(of: &isUserLoggedIn) { Data($0) }
+    let userLoggedInData = withUnsafeBytes(of: &isUserLoggedIn) { Data($0) }
     KeyChainManager.shared.saveToKeyChain(data: userLoggedInData, key: "isUserLoggedIn")
     print("logging out...")
     SessionManager.shared.currentUser = nil
-    navigationController?.pushViewController(SignInVC(), animated: true)
+    //      navigationController?.pushViewController(SignInVC(), animated: true)
+    navigationController?.popToRootViewController(animated: true)
   }
-  
+    
   @objc func saveData() {
     if imageData != nil && sView?.enterCommentTextfield.text != "" {
       let context = DBManager.shared.persistentContainer.viewContext
@@ -40,7 +41,7 @@ class ProfileVC: UIViewController, ImageTransferDelegate {
         currentUser.avatar = imageBinary
         currentUser.comment = sView?.enterCommentTextfield.text
         try! context.save()
-        
+          
         isDataExist()
       }
     } else {

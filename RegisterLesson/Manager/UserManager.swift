@@ -6,8 +6,7 @@ class UserManager {
     
   private init() {}
     
-  // MARK: - CRUD Operations
-    
+  // MARK: - CRUD 
   func createUser(name: String, email: String) {
     let context = DBManager.shared.persistentContainer.viewContext
     let newUser = User(context: context)

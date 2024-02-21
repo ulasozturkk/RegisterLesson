@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SignInView: UIView {
+class SignInView: BaseView {
   var previousButton = customIconButton(symbolName: "arrow.left")
   var titleLabel = customLabel(text: "Sign In", fontName: ConstantFonts.BoldItalic)
   var usernameLabel = customLabel(text: "Username", fontName: ConstantFonts.SemiBoldItalic)
@@ -10,17 +10,19 @@ class SignInView: UIView {
   var passwordTextField = customTextField(placeHolderText: "Enter Yout Password", isSecured: true)
   var forgotPasswordLabel = UIButton()
   var loginButton = customCircularButton(title: "Sign In")
-  //   var showPasswordButton = UIButton()
 
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+     var showPasswordButton = UIButton()
+  private let sH = UIScreen.main.bounds.height
+  private let sW = UIScreen.main.bounds.width
+  override func buildSubViews() {
     backgroundColor = .white
-    //   showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
-    //   passwordTextField.rightView = showPasswordButton
+    showPasswordButton.setImage(UIImage(systemName: "eye"), for: .normal)
+    passwordTextField.rightView = showPasswordButton
     forgotPasswordLabel.setTitle("Forgot Password?", for: .normal)
     forgotPasswordLabel.setTitleColor(.systemBlue, for: .normal)
-
-    addSubview(titleLabel)
+    
+    buildTitleLabel()
+    
     addSubview(usernameLabel)
     addSubview(usernameTextField)
     addSubview(passwordLabel)
@@ -30,11 +32,9 @@ class SignInView: UIView {
 
     forgotPasswordLabel.translatesAutoresizingMaskIntoConstraints = false
 
-    let sH = UIScreen.main.bounds.height
-    let sW = UIScreen.main.bounds.width
+    
     NSLayoutConstraint.activate([
-      titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.02),
-      titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+      
       usernameLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: sH * 0.05),
       usernameLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: sW * 0.05),
       usernameTextField.topAnchor.constraint(equalTo: usernameLabel.bottomAnchor, constant: sH * 0.01),
@@ -55,9 +55,12 @@ class SignInView: UIView {
       loginButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9)
     ])
   }
-
-  @available(*, unavailable)
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+  private func buildTitleLabel(){
+    addSubview(titleLabel)
+      
+    titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.02).isActive = true
+    titleLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
   }
+
+
 }

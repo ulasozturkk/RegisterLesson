@@ -74,7 +74,7 @@ class LessonListVC: UIViewController, UITableViewDelegate, UITableViewDataSource
       let manager = DBManager.shared.persistentContainer
       let context = manager.viewContext
 
-      var DeleteLesson = lessonList[indexPath.row]
+      let DeleteLesson = lessonList[indexPath.row]
       context.delete(DeleteLesson)
       do {
         try context.save()

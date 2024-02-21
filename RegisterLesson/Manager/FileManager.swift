@@ -23,6 +23,7 @@ class CacheManager {
       return
     }
     let fileURL = DocumentsPathUrl.appendingPathComponent(dataName) // file directory
+    print(DocumentsPathUrl.absoluteString)
 
     if manager.fileExists(atPath: fileURL.path) == true { // eğer file mevcutsa
       try? data.write(to: fileURL)
@@ -40,6 +41,7 @@ class CacheManager {
       return nil
     }
     let fileURL = DocumentsPathUrl.appendingPathComponent(dataName)
+    print(DocumentsPathUrl.absoluteString)
 
     if manager.fileExists(atPath: fileURL.path) == true { // eğer file mevcutsa
       do {

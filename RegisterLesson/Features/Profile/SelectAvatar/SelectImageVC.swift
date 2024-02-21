@@ -6,7 +6,7 @@ import UIKit
 protocol ImageTransferDelegate: AnyObject {
   func sendData(data: UIImage)
 }
-
+//source 
 class SelectImageVC: UIViewController {
   var sView: SelectImageView?
   var avatarPathList: [String] = AvatarPaths.avatars

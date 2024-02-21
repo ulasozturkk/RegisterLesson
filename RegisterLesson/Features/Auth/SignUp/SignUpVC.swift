@@ -28,6 +28,7 @@ class SignUpVC: UIViewController {
   @objc func createAccount() {
     if sView?.usernameTextField.text != "" && sView?.passwordTextField.text != "" && sView?.confirmTextField.text != "" {
       if sView?.passwordTextField.text == sView?.confirmTextField.text {
+        let appdelegate = UIApplication.shared.delegate 
         let manager = DBManager.shared.persistentContainer
         let context = manager.viewContext
         let user = User(context: context)

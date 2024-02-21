@@ -4,6 +4,9 @@ import FirebaseMessaging
 import UIKit
 
 @main
+
+// TODO: SOLVE MEMORY PROBLEMS
+// TODO: UPDATE UI's
 class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   let gcmMessageIDKey = "gcm.Message_ID"
