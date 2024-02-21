@@ -27,7 +27,7 @@ class ProfileVC: UIViewController, ImageTransferDelegate {
     KeyChainManager.shared.saveToKeyChain(data: userLoggedInData, key: "isUserLoggedIn")
     print("logging out...")
     SessionManager.shared.currentUser = nil
-    navigationController?.pushViewController(OnboardingVC(), animated: true)
+    navigationController?.pushViewController(SignInVC(), animated: true)
   }
   
   @objc func saveData() {

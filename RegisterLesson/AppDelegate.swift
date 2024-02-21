@@ -14,18 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     FirebaseApp.configure()
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    let isFirstLaunchData = KeyChainManager.shared.readDataFromKeyChain(key: "isFirstLaunch")
-    let isFirstLaunch = isFirstLaunchData?.withUnsafeBytes({ $0.load(as: Bool.self)})
+    let isFirstLaunch = KeyChainManager.shared.readDataFromKeyChain(key: "isFirstLaunch")?.withUnsafeBytes { $0.load(as: Bool.self) }
     
-    if isFirstLaunch == true || isFirstLaunch == nil{
-
+    
+    if isFirstLaunch == true || isFirstLaunch == nil {
       var isFirstLaunch = false
       let isFirstLaunchnew = withUnsafeBytes(of: &isFirstLaunch) { Data($0) }
       KeyChainManager.shared.saveToKeyChain(data: isFirstLaunchnew, key: "isFirstLaunch")
       let navigation = UINavigationController(rootViewController: OnboardingVC())
       window?.rootViewController = navigation
     } else {
-
       let navigation = UINavigationController(rootViewController: SignInVC())
       window?.rootViewController = navigation
     }

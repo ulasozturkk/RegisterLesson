@@ -21,7 +21,20 @@ class SignInVC: UIViewController {
       let viewControllers = navigationController.viewControllers
 
       if viewControllers.count >= 2 {
-        navigationController.popViewController(animated: true)
+        let lastVcIsProfile: Bool?
+        lastVcIsProfile = viewControllers.contains(where: { profilevc in
+          print(profilevc)
+          if profilevc.presentedViewController == self.presentedViewController {
+            navigationController.pushViewController(OnboardingVC(), animated: true)
+            return true
+          }
+          return true
+        })
+
+        if lastVcIsProfile == true {
+        } else {
+          navigationController.popViewController(animated: true)
+        }
       } else {
         navigationController.pushViewController(OnboardingVC(), animated: true)
       }
@@ -107,7 +120,7 @@ class SignInVC: UIViewController {
           let alert = UIAlertController(title: "Signed In", message: "You already signed in", preferredStyle: .alert)
           let action = UIAlertAction(title: "OK", style: .default)
           alert.addAction(action)
-          self.present(alert,animated: true)
+          present(alert, animated: true)
         } catch {}
       }
     }

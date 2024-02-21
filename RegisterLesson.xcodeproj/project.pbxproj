@@ -151,6 +151,19 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		522585532B85D3F900F733A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				521ACC162B7EA80200941225 /* customImageView.swift */,
+				52B989462B7E356900DA824B /* customLabel.swift */,
+				52B989442B7E344D00DA824B /* customIconButton.swift */,
+				52B989422B7E312900DA824B /* customCircularButton.swift */,
+				52B989402B7E302600DA824B /* customAngledButton.swift */,
+				52B9893E2B7E2D2C00DA824B /* customTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5256AFC12B73A240007F6E0C = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +187,6 @@
 		5256AFCC2B73A240007F6E0C /* RegisterLesson */ = {
 			isa = PBXGroup;
 			children = (
-				52B989252B7E08D100DA824B /* CoreDataHelpers */,
 				52B989222B7E083300DA824B /* Models */,
 				52DB60452B7B88E500216375 /* RegisterLesson.entitlements */,
 				526E4EC62B7A2D9700E053EE /* Shared */,
@@ -317,13 +329,8 @@
 		5281A1072B74B18E005B42F2 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				522585532B85D3F900F733A5 /* Components */,
 				526E4EBF2B7A0D1300E053EE /* Extensions */,
-				52B9893E2B7E2D2C00DA824B /* customTextField.swift */,
-				52B989402B7E302600DA824B /* customAngledButton.swift */,
-				52B989422B7E312900DA824B /* customCircularButton.swift */,
-				52B989442B7E344D00DA824B /* customIconButton.swift */,
-				52B989462B7E356900DA824B /* customLabel.swift */,
-				521ACC162B7EA80200941225 /* customImageView.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -371,13 +378,6 @@
 				52B9893A2B7E0D0C00DA824B /* Lesson.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		52B989252B7E08D100DA824B /* CoreDataHelpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreDataHelpers;
 			sourceTree = "<group>";
 		};
 		AFC3EE3D0BBA305822941E72 /* Pods */ = {
