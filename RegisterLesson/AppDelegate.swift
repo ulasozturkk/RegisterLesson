@@ -12,34 +12,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in }
 
     FirebaseApp.configure()
-
     window = UIWindow(frame: UIScreen.main.bounds)
     
-    let userLoggedInData = KeyChainManager.shared.readDataFromKeyChain(key: "isUserLoggedIn")?.withUnsafeBytes { $0.load(as: Bool.self) }
+    let isFirstLaunchData = KeyChainManager.shared.readDataFromKeyChain(key: "isFirstLaunch")
+    let isFirstLaunch = isFirstLaunchData?.withUnsafeBytes({ $0.load(as: Bool.self)})
     
-    if userLoggedInData == false || userLoggedInData == nil {
-      let navigation = UINavigationController(rootViewController: SignInVC()) // TODO: login
+    if isFirstLaunch == true || isFirstLaunch == nil{
+
+      var isFirstLaunch = false
+      let isFirstLaunchnew = withUnsafeBytes(of: &isFirstLaunch) { Data($0) }
+      KeyChainManager.shared.saveToKeyChain(data: isFirstLaunchnew, key: "isFirstLaunch")
+      let navigation = UINavigationController(rootViewController: OnboardingVC())
       window?.rootViewController = navigation
     } else {
-      let context = DBManager.shared.persistentContainer.viewContext
-      let currentUserName = KeyChainManager.shared.readDataFromKeyChain(key: "username")
-      if let currentUserName = currentUserName {
-        let currentUserNameString = String(data: currentUserName, encoding: .utf8)
-        let fetchRequset: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequset.predicate = NSPredicate(format: "username == %@", currentUserNameString!)
-        do {
-          let users = try context.fetch(fetchRequset)
-          guard let user = users.first else {
-            let navigation = UINavigationController(rootViewController: SignInVC())
-            window?.rootViewController = navigation
-            return true
-          }
-          SessionManager.shared.loginUser(user: user)
-          let navigation = UINavigationController(rootViewController: TabBar())
-          window?.rootViewController = navigation
-        } catch {}
-      }
+
+      let navigation = UINavigationController(rootViewController: SignInVC())
+      window?.rootViewController = navigation
     }
+   
     window?.makeKeyAndVisible()
         
     return true

@@ -10,13 +10,22 @@ class SignInVC: UIViewController {
 
     navigationItem.hidesBackButton = true
     navigationItem.leftBarButtonItem = UIBarButtonItem(customView: sView!.previousButton)
+    isUserLoggedIn()
     checkUserData()
     sView?.previousButton.addTarget(self, action: #selector(goPrevious), for: .touchUpInside)
     sView?.loginButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
   }
 
   @objc func goPrevious() {
-    navigationController?.pushViewController(OnboardingVC(), animated: true)
+    if let navigationController = navigationController {
+      let viewControllers = navigationController.viewControllers
+
+      if viewControllers.count >= 2 {
+        navigationController.popViewController(animated: true)
+      } else {
+        navigationController.pushViewController(OnboardingVC(), animated: true)
+      }
+    }
   }
 
   @objc func signInButtonTapped() {
@@ -77,6 +86,30 @@ class SignInVC: UIViewController {
       }
     } catch {
       print("Hata")
+    }
+  }
+
+  func isUserLoggedIn() {
+    let userLoggedInData = KeyChainManager.shared.readDataFromKeyChain(key: "isUserLoggedIn")?.withUnsafeBytes { $0.load(as: Bool.self) }
+
+    if userLoggedInData == true {
+      let context = DBManager.shared.persistentContainer.viewContext
+      let currentUserName = KeyChainManager.shared.readDataFromKeyChain(key: "username")
+      if let currentUserName = currentUserName {
+        let currentUserNameString = String(data: currentUserName, encoding: .utf8)
+        let fetchRequset: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequset.predicate = NSPredicate(format: "username == %@", currentUserNameString!)
+        do {
+          let users = try context.fetch(fetchRequset)
+          guard let user = users.first else { return }
+          SessionManager.shared.loginUser(user: user)
+          navigationController?.pushViewController(TabBar(), animated: true)
+          let alert = UIAlertController(title: "Signed In", message: "You already signed in", preferredStyle: .alert)
+          let action = UIAlertAction(title: "OK", style: .default)
+          alert.addAction(action)
+          self.present(alert,animated: true)
+        } catch {}
+      }
     }
   }
 
