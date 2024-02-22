@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ProfileView: UIView {
+class ProfileView: BaseView {
   let selectImageLabel = customLabel(text: "Select Your Avatar!", fontName: ConstantFonts.SemiBoldItalic)
   let avatarLabel = customLabel(text: "Your Avatar", fontName: ConstantFonts.SemiBoldItalic)
   let selectImage = customImageView(frame: .zero)
@@ -12,72 +12,92 @@ class ProfileView: UIView {
   let saveButton = customCircularButton(title: "Save")
   let changePasswordButton = customAngledButton(title: "Change Password", color: .orange, titleColor: .white)
   let logOutButton = customAngledButton(title: "Log Out", color: .red, titleColor: .white)
-  
-  override init(frame: CGRect) {
-    super.init(frame: frame)
+  let sH = UIScreen.main.bounds.height
+  override func buildSubViews() {
     backgroundColor = .white
     
-    addSubview(selectImage)
-    addSubview(avatarLabel)
-    addSubview(selectImageLabel)
-    addSubview(enterLabel)
-    addSubview(commentLabel)
-    addSubview(enterCommentTextfield)
-    addSubview(enteredTextLabel)
-    addSubview(saveButton)
-    addSubview(changePasswordButton)
-    addSubview(logOutButton)
+    buildSelectImageLabel()
+    buildAvatarLabel()
+    buildSelectImage()
+    buildEnterLabel()
+    buildCommentLabel()
+    buildEnterCommentTextField()
+    buildEnteredTextLabel()
+    buildSaveButton()
+    buildLogOutButton()
+    buildChangePasswordButton()
     
-    let sH = UIScreen.main.bounds.height
-    NSLayoutConstraint.activate([
-      selectImageLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.05),
-      selectImageLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      
-      // same
-      avatarLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.05),
-      avatarLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      
-      selectImage.topAnchor.constraint(equalTo: selectImageLabel.bottomAnchor, constant: sH * 0.05),
-      selectImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      selectImage.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.2),
-      selectImage.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
-      
-      enterLabel.topAnchor.constraint(equalTo: selectImage.bottomAnchor, constant: sH * 0.05),
-      enterLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      // same
-      commentLabel.topAnchor.constraint(equalTo: selectImage.bottomAnchor, constant: sH * 0.05),
-      commentLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      
-      enterCommentTextfield.topAnchor.constraint(equalTo: enterLabel.bottomAnchor, constant: sH * 0.05),
-      enterCommentTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      enterCommentTextfield.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
-      enterCommentTextfield.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
-      // same
-      enteredTextLabel.topAnchor.constraint(equalTo: enterLabel.bottomAnchor, constant: sH * 0.05),
-      enteredTextLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      enteredTextLabel.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
-      enteredTextLabel.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
-      
-      saveButton.topAnchor.constraint(equalTo: enterCommentTextfield.bottomAnchor, constant: sH * 0.01),
-      saveButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      saveButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
-      saveButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
-      
-      changePasswordButton.bottomAnchor.constraint(equalTo: logOutButton.topAnchor, constant: -(sH * 0.02)),
-      changePasswordButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      changePasswordButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
-      changePasswordButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
-      
-      logOutButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(sH * 0.05)),
-      logOutButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
-      logOutButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08),
-      logOutButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9)
-      
-    ])
   }
-  
-  @available(*, unavailable)
-  required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+
+  private func buildSelectImageLabel() {
+    addSubview(selectImageLabel)
+    selectImageLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.05).isActive = true
+    selectImageLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+  }
+
+  private func buildAvatarLabel() {
+    addSubview(avatarLabel)
+    avatarLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: sH * 0.05).isActive = true
+    avatarLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+  }
+
+  private func buildSelectImage() {
+    addSubview(selectImage)
+    selectImage.topAnchor.constraint(equalTo: selectImageLabel.bottomAnchor, constant: sH * 0.05).isActive = true
+    selectImage.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    selectImage.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.2).isActive = true
+    selectImage.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.8).isActive = true
+  }
+
+  private func buildEnterLabel() {
+    addSubview(enterLabel)
+    enterLabel.topAnchor.constraint(equalTo: selectImage.bottomAnchor, constant: sH * 0.05).isActive = true
+    enterLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+  }
+
+  private func buildCommentLabel() {
+    addSubview(commentLabel)
+    commentLabel.topAnchor.constraint(equalTo: selectImage.bottomAnchor, constant: sH * 0.05).isActive = true
+    commentLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+  }
+
+  private func buildEnterCommentTextField() {
+    addSubview(enterCommentTextfield)
+    enterCommentTextfield.topAnchor.constraint(equalTo: enterLabel.bottomAnchor, constant: sH * 0.05).isActive = true
+    enterCommentTextfield.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    enterCommentTextfield.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
+    enterCommentTextfield.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9).isActive = true
+  }
+
+  private func buildEnteredTextLabel() {
+    addSubview(enteredTextLabel)
+    enteredTextLabel.topAnchor.constraint(equalTo: enterLabel.bottomAnchor, constant: sH * 0.05).isActive = true
+    enteredTextLabel.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    enteredTextLabel.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
+    enteredTextLabel.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9).isActive = true
+  }
+
+  private func buildSaveButton() {
+    addSubview(saveButton)
+    saveButton.topAnchor.constraint(equalTo: enterCommentTextfield.bottomAnchor, constant: sH * 0.01).isActive = true
+    saveButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    saveButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
+    saveButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9).isActive = true
+  }
+
+  private func buildChangePasswordButton() {
+    addSubview(changePasswordButton)
+    changePasswordButton.bottomAnchor.constraint(equalTo: logOutButton.topAnchor, constant: -(sH * 0.02)).isActive = true
+    changePasswordButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    changePasswordButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
+    changePasswordButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9).isActive = true
+  }
+
+  private func buildLogOutButton() {
+    addSubview(logOutButton)
+    logOutButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -(sH * 0.05)).isActive = true
+    logOutButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
+    logOutButton.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, multiplier: 0.08).isActive = true
+    logOutButton.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.widthAnchor, multiplier: 0.9).isActive = true
   }
 }
