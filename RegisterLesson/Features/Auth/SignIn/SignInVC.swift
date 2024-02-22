@@ -117,10 +117,7 @@ class SignInVC: UIViewController {
           guard let user = users.first else { return }
           SessionManager.shared.loginUser(user: user)
           navigationController?.pushViewController(TabBar(), animated: true)
-          let alert = UIAlertController(title: "Signed In", message: "You already signed in", preferredStyle: .alert)
-          let action = UIAlertAction(title: "OK", style: .default)
-          alert.addAction(action)
-          present(alert, animated: true)
+
         } catch {}
       }
     }

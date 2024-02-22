@@ -6,8 +6,9 @@ class BaseView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame:frame)
+   
     buildSubViews()
-    addConstraints()
+
   }
   
   required init?(coder: NSCoder) {
@@ -18,8 +19,6 @@ class BaseView: UIView {
     fatalError("buildSubviews must be overridden")
   }
   
-  func addConstraints(){
-    
-  }
+  
   
 }
